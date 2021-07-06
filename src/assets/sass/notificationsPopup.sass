@@ -1,0 +1,200 @@
+.popup-notifications
+    background: #fff
+    border-radius: 12px
+    box-shadow: 0px 8px 24px rgba(190, 190, 217, 0.16)
+    box-sizing: border-box
+    width: 428px
+    position: absolute
+    top: 72px
+    right: 280px
+    z-index: 999999
+
+.popup-notifications.enter
+    opacity: 0
+
+.popup-notifications.enter-active 
+    opacity: 1
+    transition: opacity 500ms
+
+.popup-notifications.exit 
+    opacity: 1
+
+.popup-notifications.exit-active 
+    opacity: 0
+    transition: opacity 500ms
+
+.popup-notifications-header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 24px 32px
+    &__title
+        font-size: 20px
+        line-height: 25.58px
+        color: #212126
+        font-weight: 500
+        margin: 0
+    &--icon
+        cursor: pointer
+        transform: rotate(90deg)
+        width: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+
+.popup-notifications-list
+    div.scrollbar-container
+        display: flex
+        flex-direction: column
+        height: 436px
+        .ps__rail-y
+            right: 12px!important
+    &__separator
+        font-size: 14px
+        line-height: 17.9px
+        font-weight: 500
+        color: #9E9EB2
+        margin: 12px 0 4px 32px
+
+.popup-notifications-item
+    display: flex
+    flex-direction: row
+    padding: 12px 32px
+    position: relative
+    cursor: pointer
+    transition: all .2s ease-in-out
+    box-sizing: border-box
+    height: 93px
+    &__dot
+        background: #2051FF
+        border-radius: 50%
+        max-width: 8px
+        min-width: 8px
+        height: 8px
+        position: absolute
+        left: 16px
+        top: 38px
+
+    &:hover
+        background: #FAFAFF
+    &::after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 1px
+        width: 368px
+        border-top: 1px solid #E5E5ED
+        left: 32px
+    &:first-child
+        &::after
+            content: none
+    &__profile
+        min-width: 60px
+        max-width: 60px
+        height: 60px
+    &--icon
+        display: flex
+        background: #F1F4FF
+        border-radius: 50%
+        min-width: 60px
+        max-width: 60px
+        height: 60px
+        box-sizing: border-box
+        svg
+            width: auto!important
+            height: auto!important
+            margin: auto
+
+    &--anim
+        position: relative
+        &-wrapper
+            width: 60px
+            height: 60px
+        &__animation
+            position: absolute
+            top: 4px
+            left: 4px
+            width: 52px
+            height: 52px
+        &__progress
+            top: 0
+            left: 0
+            position: absolute
+
+
+    &--details
+        display: flex
+        flex-direction: column
+        margin-left: 16px
+        &__title
+            font-size: 16px
+            line-height: 24px
+            color: #212126
+            font-weight: 400
+            margin: 0 0 4px 0
+        &__time
+            font-size: 14px
+            font-weight: 400
+            line-height: 17.41px
+            color: #9E9EB2
+
+.popup-notifications-bottom
+    padding: 16px 0 20px 0
+    display: flex
+    justify-content: center
+    a
+        color: #667FFF
+        transition: all .2s ease-in-out
+        font-size: 16px
+        line-height: 24px
+        font-weight: 400
+        text-decoration: none
+        &:hover
+            color: #9BACFF
+
+.popup-notifications-details
+    display: flex
+    flex-direction: column
+    background: #fff
+    box-shadow: 0px 12px 24px -2px rgba(81, 89, 133, 0.12)
+    border-radius: 12px
+    position: absolute
+    top: 62px
+    right: 0
+    z-index: 999999
+    box-sizing: border-box
+    justify-content: center
+    width: 432px
+    height: 102px
+    &--item
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 10px 32px
+        transition: all .2s ease-in-out
+        background: #fff
+        cursor: pointer
+        span
+            color: #212126
+            font-weight: 400
+            font-size: 16px
+            line-height: 24px
+            margin-left: 16px
+
+        &:hover
+            background: #FAFAFF
+
+.popup-notifications-details.enter
+    opacity: 0
+
+.popup-notifications-details.enter-active 
+    opacity: 1
+    transition: opacity 500ms
+
+.popup-notifications-details.exit 
+    opacity: 1
+
+.popup-notifications-details.exit-active 
+    opacity: 0
+    transition: opacity 500ms

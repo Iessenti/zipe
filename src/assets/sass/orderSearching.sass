@@ -1,0 +1,189 @@
+.order-searching
+  display: flex
+  flex-direction: column
+  position: relative
+  &--header
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &__title
+      position: absolute
+      font-weight: 500
+      font-size: 28px
+      line-height: 35.81px
+      color: #212126
+      margin: 0
+      top: 0
+      left: 258px
+    &__text
+      margin-top: 38px
+      font-weight: 400
+      font-size: 16px
+      line-height: 24px
+      color: #525264
+    &__icon
+      position: absolute
+      top: 0
+      right: 0
+      width: 20px
+      cursor: pointer
+      display: flex
+      justify-content: flex-end
+
+.order-searching-popup
+  position: absolute
+  display: flex
+  flex-direction: column
+  background: #FFFFFF
+  box-shadow: 0px 12px 24px -2px rgba(81, 89, 133, 0.12)
+  border-radius: 12px
+  box-sizing: border-box
+  padding: 12px 0
+  width: 214px
+  top: 34px
+  right: 0
+  z-index: 786872
+  &--item
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 12px 32px
+    cursor: pointer
+    &__icon
+      display: flex
+    &__text
+      margin-left: 12px
+      font-size: 16px
+      font-weight: 400
+      line-height: 1
+      color: #212126
+    &:hover
+      background: #FAFAFF
+    &:last-child
+      &:hover
+        background: #FFF7F7
+      span
+        color: #E97171
+
+.order-searching-popup.enter
+  opacity: 0
+
+.order-searching-popup.enter-active 
+  opacity: 1
+  transition: opacity 500ms
+
+.order-searching-popup.exit 
+  opacity: 1
+
+.order-searching-popup.exit-active 
+  opacity: 0
+  transition: opacity 500ms
+
+.order-searching-animation 
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 16px
+    position: relative
+    &--wrapper
+      position: relative
+      &__icon
+        position: absolute
+    &--another
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 40px
+      height: 40px
+      position: absolute
+      background: #fff
+      border-radius: 50%
+      box-shadow: 0px 12px 12px -4px rgba(81, 89, 133, 0.1)
+      bottom: -12px
+      z-index: 3000
+      img
+        width: 18px
+        height: 18px
+
+.order-searching-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 44px
+  &__text
+    text-align: center
+    font-weight: 400
+    line-height: 24px
+    font-size: 16px
+    color: #525264
+    width: 55%
+  &--separator
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-top: 40px
+    &__line
+      width: 419px
+      height: 1px
+      background: #E5E5ED
+    &__text
+      color: #212126
+      line-height: 24px
+      font-size: 16px
+      font-weight: 400
+      margin: 0 8px
+
+.order-searching-articles
+  display: flex
+  flex-direction: column
+  margin-top: 32px
+  &__title
+    margin: 0
+    color: #212126
+    font-size: 28px
+    font-weight: 500
+    line-height: 35.81px
+    text-align: center
+
+.order-searching-articles-results
+  div.scrollbar-container
+    display: flex
+    flex-direction: row
+    width: 840px
+    padding-top: 24px
+    padding-bottom: 12px
+  &--result
+    background: #6ABC74
+    border-radius: 6px
+    min-width: 188px
+    max-width: 188px
+    height: 296px
+    margin-right: 16px
+    position: relative
+    &__title
+      font-size: 20px
+      line-height: 25.58px
+      font-weight: 500
+      color: #ffffff
+      margin: 16px 16px 0 16px
+      position: relative
+      z-index: 101
+    &__img
+      position: absolute
+      bottom: 0
+      z-index: 100
+    &:nth-child(2)
+      background: #415CBF
+    &:nth-child(3)
+      background: #FFD2D2
+      h3
+        color: #412323
+    &:nth-child(5)
+      background: #415CBF
+    &:nth-child(6)
+      background: #FFD2D2
+      h3
+        color: #412323
+    &:last-child
+      margin-right: 0

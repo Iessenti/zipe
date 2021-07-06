@@ -1,0 +1,167 @@
+.order-creating 
+    display: flex
+    .container 
+        margin: auto
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &--block
+        width: 880px
+        box-sizing: border-box
+        padding: 40px
+        background: #fff
+        border-radius: 12px
+        margin-top: 24px
+        position: relative
+    &--block-advanced
+        height: 850px
+        padding: 40px 12px 40px 40px!important
+
+.order-creating--block.enter
+  opacity: 0
+
+.order-creating--block.enter-active 
+  opacity: 1
+  transition: opacity 500ms
+
+.order-creating--block.exit 
+  opacity: 1
+
+.order-creating--block.exit-active 
+  opacity: 0
+  transition: opacity 500ms
+
+.sidebar
+    display: flex
+    flex-direction: column
+    padding-top: 64px
+    transition: opacity .5s ease-in-out
+    &.disabled
+        opacity: .5
+        pointer-events: none !important
+
+.order-category 
+    display: flex
+    flex-direction: column
+    width: 392px
+    &--search
+        display: flex
+        flex-direction: column
+    &__title
+        font-size: 28px
+        font-weight: 500
+        margin: 0 0 24px 0
+        color: #212126
+
+.category-search
+    &--form
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        border: 1.5px solid #E5E5ED
+        background-color: #EEEEF4
+        border-radius: 6px
+        padding: 8px 16px
+        margin-bottom: 16px
+        transition: all .2s ease-in-out
+        box-sizing: border-box
+        height: 40px
+        &:hover
+            border: 1.5px solid #C5C5D9
+        &__input
+            border: none
+            outline: none
+            background-color: transparent
+            font-size: 16px
+            width: 93%
+            color: #212126
+            font-weight: 400
+            &::placeholder
+                color: #9E9EB2
+        &__img
+            display: flex
+            align-items: center
+            cursor: pointer
+    &__divider
+        margin: 8px 0
+        background: #E5E5ED
+        width: 100%
+        height: 1px
+
+.category-results 
+    display: flex
+    flex-direction: column
+    height: 404px
+    &--item
+        padding: 8px 16px
+        border-radius: 6px
+        cursor: pointer
+        box-sizing: border-box
+        height: 40px
+        &__title
+            margin: 0
+            font-weight: 400
+            font-size: 16px
+            color: #212126
+            line-height: 24px
+        &.active
+            background-color: #EEEEF4
+            span
+                font-weight: 500
+                line-height: 23.8px
+        &:hover
+            transition: all .2s ease-out
+            background-color: #EEEEF4
+        &:last-child
+            h5
+                font-weight: 500
+
+.order-type
+    display: flex
+    flex-direction: column
+    margin-bottom: 40px
+    &__title
+        font-size: 28px
+        font-weight: 500
+        margin: 0
+        color: #212126
+
+.type-results
+    div.scrollbar-container
+        display: flex
+        flex-direction: row
+        width: 450px
+        padding-bottom: 24px
+        padding-top: 32px
+    &--item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        margin-right: 32px
+        transition: all .2s ease-out
+        &__img
+            background: #ffffff
+            border-radius: 12px
+            margin-bottom: 12px
+            display: flex
+        &__title
+            margin: 0
+            font-weight: 400
+            font-size: 16px
+            color: #525264
+        &.active
+            transform: translateY(-8px)
+            h5
+                font-weight: 500
+            &:hover
+                transform: translateY(-8px)
+        &:hover
+            transition: all .2s ease-out
+            transform: translateY(-4px)
+        &:last-child
+            margin-right: 16px
+        &:first-child
+            margin-left: 16px

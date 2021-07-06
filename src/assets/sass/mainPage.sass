@@ -1,0 +1,252 @@
+.main-page
+    display: flex
+    margin-top: 48px
+    .container 
+        margin: auto
+        display: flex
+        flex-direction: column
+
+.main-page-search
+    display: flex
+    flex-direction: column
+    height: 298px
+    background: #fff
+    padding: 72px 0 94px 96px
+    border-radius: 12px
+    position: relative
+    img
+        position: absolute
+        left: 422px
+        top: 0
+    &__title
+        font-size: 28px
+        line-height: 35.81px
+        font-weight: 500
+        margin: 0 0 8px 0
+        color: #212126
+    &__text
+        font-size: 16px
+        line-height: 24px
+        font-weight: 400
+        margin-bottom: 20px
+        color: #525264
+        a
+            color: #667FFF
+            text-decoration: none
+            transition: all .2s ease-in-out
+            &:hover
+                color: #9BACFF
+    &--form
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        border: 1.5px solid #E5E5ED
+        background-color: #F7F7FA
+        border-radius: 8px
+        box-sizing: border-box
+        padding: 10px 16px
+        height: 44px
+        width: 560px
+        transition: all .2s ease-in-out
+        &:hover
+            border: 1.5px solid #C5C5D9
+        &__input
+            outline: none
+            border: none
+            background: transparent
+            width: 312px
+            font-size: 14px
+            font-weight: 400
+            color: #212126
+            &::placeholder
+                color: #9E9EB2
+        svg
+            cursor: pointer
+    &::after
+        position: absolute
+        height: 298px
+        top: 0
+        right: 0
+        width: 606px
+        border-radius: 12px
+        content: ''
+        background: url('../images/main_page_bg.png') no-repeat
+        background-size: cover
+
+.main-page-types
+    display: flex
+    flex-direction: row
+    padding: 0 40px
+    margin-top: 24px
+    justify-content: space-between
+    &--type
+        display: flex
+        flex-direction: column
+        margin-right: 16px
+        cursor: pointer
+        &:last-child
+            margin-right: 0
+        &__img
+            width: 96px
+            margin: auto
+            background: #FFFFFF
+            border-radius: 12px
+            margin-bottom: 12px
+        span
+            text-align: center
+            color: #525264
+            line-height: 24px
+            font-size: 16px
+            font-weight: 400
+            transition: all .2s ease-in-out
+        &:hover
+            span
+                color: #000000
+
+.main-page-header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin: 96px 0 40px 0
+    div
+        display: flex
+        flex-direction: row
+        align-items: center
+    &__title
+        line-height: 35.81px
+        color: #212126
+        font-weight: 500
+        font-size: 28px
+        span
+            color: #667FFF
+    &--arrow
+        background: #FFFFFF
+        border-radius: 4px 
+        display: flex
+        width: 40px
+        height: 40px
+        margin-right: 12px
+        cursor: pointer
+        transition: all .2s ease-in-out
+        &:last-child
+            margin-right: 0
+        &:hover
+            box-shadow: 0px 12px 24px -8px rgba(67, 108, 255, 0.48)!important
+        img
+            margin: auto
+
+.main-page-popular
+    display: flex
+    flex-direction: column
+
+.main-page-popular-content
+    display: grid
+    grid-template-columns: 376px 264px 280px 376px
+    grid-template-rows: repeat(2, 1fr)
+    grid-column-gap: 16px
+    grid-row-gap: 16px
+    height: 544px
+    width: 100%
+    div
+        padding: 40px
+        position: relative
+        img
+            position: absolute   
+            cursor: pointer
+        span
+            position: absolute
+            line-height: 20.46px
+            font-size: 16px
+            font-weight: 500
+            color: #FFFFFF
+            bottom: 18px
+            left: 35px
+            cursor: pointer
+        h3
+            line-height: 36px
+            margin: 0
+            color: #40576C
+            font-weight: 500
+            font-size: 24px
+    &--card
+        &-column
+            grid-row-start: 1
+            grid-row-end: 3
+            background: #C8E0E2
+            border-radius: 12px
+        &-row
+            &-first
+                grid-column-start: 3
+                grid-column-end: 5
+                background: #EBE7FE
+                border-radius: 12px
+            &-second
+                grid-column-start: 2
+                grid-column-end: 4
+                background: #EBE7FE
+                border-radius: 12px
+        &-box
+            &-first
+                grid-column-start: 2
+                grid-column-end: 3
+                background: #F4DDE5
+                border-radius: 12px
+            &-second
+                grid-column-start: 4 
+                grid-column-end: 5
+                background: #F4DDE5
+                border-radius: 12px
+
+.popular-background
+    bottom: 0
+    right: 0
+    border-radius: 12px
+
+.popular-btn
+    bottom: 0
+    left: 0
+
+.main-page-articles
+    display: flex
+    flex-direction: column
+    margin-bottom: 96px
+    &--content
+        display: flex
+        flex-direction: row
+
+.main-page-article
+    display: flex
+    flex-direction: column
+    margin-right: 16px
+    background: #FFFFFF
+    border-radius: 12px
+    width: 320px
+    box-sizing: border-box
+    cursor: pointer
+    &:last-child
+        margin-right: 0
+    div
+        margin-top: auto
+        padding: 16px
+        display: flex
+        flex-direction: row
+        align-items: center
+        div
+            padding: 0!important
+            margin-left: 12px
+            display: flex
+            flex-direction: column
+            align-items: flex-start!important
+            h4
+                line-height: 19.2px
+                font-size: 16px
+                font-weight: 500
+                color: #212126
+                margin: 0 0 4px 0
+            span
+                line-height: 16.8px
+                font-size: 14px
+                font-weight: 400
+                color: #525264

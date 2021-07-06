@@ -1,0 +1,478 @@
+.settings-page
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 24px
+    position: relative
+    .container
+        display: flex
+        flex-direction: column
+    &__title
+        line-height: 35.81px
+        font-size: 28px
+        font-weight: 500
+        color: #212126
+        margin: 0 0 24px 0
+        position: relative
+        img
+            position: absolute
+            width: 26px
+            left: 152px
+            bottom: 6px
+    &--side
+        display: flex
+        flex-direction: column
+        width: 320px
+        height: 260px
+        padding: 22px 16px
+        box-sizing: border-box
+        background: #FFFFFF
+        border-radius: 12px
+        margin-right: 16px
+    &-wrapper
+        display: flex
+        flex-direction: row
+
+.settings-page-header
+    &-row
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding: 32px 40px
+    &-column
+        display: flex
+        flex-direction: column
+        padding: 32px 40px
+    &-wrapper
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+    &__title
+        line-height: 25.58px
+        font-size: 20px
+        font-weight: 500
+        color: #212126
+    &__details
+        cursor: pointer
+        width: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        transform: rotate(90deg)
+    &--form
+        display: flex
+        flex-direction: row
+        align-items: center
+        border: 1.5px solid #E5E5ED
+        background-color: #F7F7FA
+        border-radius: 8px
+        box-sizing: border-box
+        padding: 8px 16px 9px 16px
+        height: 40px
+        width: 352px
+        transition: all .2s ease-in-out
+        margin-top: 24px
+        &:hover
+            border: 1.5px solid #C5C5D9
+        &__input
+            outline: none
+            border: none
+            background: transparent
+            width: 312px
+            font-size: 14px
+            font-weight: 400
+            color: #212126
+            &::placeholder
+                color: #9E9EB2
+        &__img
+            margin-left: 16px
+            cursor: pointer
+            display: flex
+
+.settings-page-block
+    display: flex
+    flex-direction: column
+    width: 992px
+    height: 791px
+    &--row
+        display: flex
+        flex-direction: row
+        margin-bottom: 16px
+        &:last-child
+            margin-bottom: 0
+
+.settings-page-account
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 32px 40px
+    background: #fff
+    border-radius: 12px
+    &--bio
+        display: flex
+        flex-direction: column
+        &__title
+            font-weight: 500
+            font-size: 20px
+            line-height: 26px
+            color: #212126
+
+.settings-page-general
+    &-title
+        font-weight: 500
+        font-size: 20px
+        line-height: 26px
+        color: #212126
+        margin: 0
+    &-first-block
+        margin-bottom: 16px
+        width: 100%!important
+    &-block
+        display: flex
+        flex-direction: column
+        padding: 32px 40px
+        background: #ffffff
+        border-radius: 12px
+        width: 488px
+    &-header
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 32px
+        &-icon
+            cursor: pointer
+            width: 20px
+            display: flex
+            justify-content: center
+            align-items: center
+            transform: rotate(90deg)
+
+.settings-essential-info
+    &-col-wrapper
+        display: flex
+        flex-direction: column
+        &:last-child
+            width: 632px
+            margin-left: 40px
+    &-row-wrapper
+        display: flex
+        flex-direction: row
+    &--avatar
+        display: flex
+        position: relative
+        margin: 0 auto 16px auto
+        width: 128px
+        &__edit
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #5177FF
+            border: 3px solid #FFFFFF
+            border-radius: 50%
+            width: 32px
+            height: 32px
+            bottom: 0
+            right: 0
+            cursor: pointer
+    &--account
+        display: flex
+        flex-direction: column
+        &__name
+            font-weight: 500
+            font-size: 20px
+            line-height: 26px
+            color: #212126
+            margin-bottom: 8px
+        &__details
+            display: flex
+            flex-direction: row
+            align-items: center
+            margin-bottom: 8px
+            div
+                border-radius: 50%
+                width: 4px
+                height: 4px
+                background: #525264
+                margin-left: 8px
+            span
+                font-weight: 400
+                font-size: 16px
+                line-height: 24px
+                color: #525264
+                margin-left: 8px
+    &--level
+        display: flex
+        flex-direction: row
+        align-items: center
+        &__text
+            font-weight: normal
+            font-size: 16px
+            line-height: 24px
+            color: #525264
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #FF0000
+            border-radius: 13px 
+            width: 68px
+            height: 18px
+            margin-left: 8px
+            span
+                font-weight: 400
+                font-size: 12px
+                line-height: 15px
+                color: #FFFFFF
+
+.settings-essential-info-form
+    display: flex
+    flex-direction: column
+    &--row
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        &:first-child
+            margin-bottom: 16px
+
+.settings-essential-info-form-group
+    display: flex
+    flex-direction: column
+    &__label
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: #9E9EB2
+        margin-bottom: 4px
+    &--field
+        background: #F7F7FA
+        border-radius: 6px
+        padding: 10px 16px
+        box-sizing: border-box
+        width: 296px
+        height: 44px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        span
+            font-weight: 400
+            font-size: 16px
+            line-height: 24px
+            color: #212126
+    &__bio
+        padding: 12px 16px
+        background: #F7F7FA
+        border: 1.5px solid #E5E5ED
+        box-sizing: border-box
+        border-radius: 6px
+        resize: none
+        overflow-y: scroll
+        overflow: -moz-hidden-unscrollable
+        transition: all .2s ease-in-out
+        width: 100%
+        height: 100%
+        box-sizing: border-box
+        outline: none
+    &--textare-wrapper
+        width: 632px
+        height: 84px
+        position: relative
+    &__counter
+        font-weight: 400
+        font-size: 12px
+        line-height: 15px
+        color: #9E9EB2
+        position: absolute
+        bottom: 5px
+        right: 16px
+        z-index: 9999
+
+.settings-essential-info-form-btns
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-left: auto
+    margin-top: 32px
+    span
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: #E97171
+        transition: all .2s ease-in-out
+        cursor: pointer
+        &:hover
+            color: #FFB2B2
+    button
+        height: 52px
+        box-sizing: border-box
+        padding: 16px 32px
+        margin-left: 24px
+        width: 147px
+        background: #436CFF
+        border-radius: 28px
+        font-weight: 500
+        font-size: 16px
+        line-height: 20.46px
+        color: #FFFFFF
+        overflow: hidden
+        position: relative
+        outline: none
+        cursor: pointer
+
+.account-page-settings
+    display: flex
+    flex-direction: column
+    &--row
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+.display-essential-info
+    &-row-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-bottom: 16px
+    &--group
+        display: flex
+        flex-direction: column
+        &__label
+            font-weight: 400
+            font-size: 16px
+            line-height: 24px
+            color: #9E9EB2
+            margin-bottom: 4px
+        &__preview
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            padding: 10px 16px
+            background: #F7F7FA
+            border-radius: 6px
+            span
+                font-weight: 500
+                font-size: 16px
+                line-height: 20px
+                color: #212126
+                span
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 20px
+                    color: #9E9EB2
+                    margin-left: 8px
+    &__separator
+        width: 100%
+        height: 1px
+        background: #E5E5ED
+        border-radius: 2px
+        margin: 16px auto 32px auto
+    &__switch-text
+        font-weight: 500
+        font-size: 20px
+        line-height: 26px
+        color: #212126  
+
+.switch 
+    position: relative
+    display: inline-block
+    width: 42px 
+    height: 24px
+
+.switch input 
+    opacity: 0
+    width: 0
+    height: 0
+
+.slider 
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #9E9EB2
+    -webkit-transition: .4s
+    transition: .4s
+
+.slider
+    &::before 
+        position: absolute
+        content: ""
+        height: 24px
+        width: 24px
+        left: 0
+        bottom: 0
+        background-color: white
+        -webkit-transition: .4s
+        transition: .4s
+        background: #FFFFFF
+        border: 2px solid #9E9EB2
+
+input:checked + .slider 
+    background-color: #2051FF
+
+input:focus + .slider 
+    box-shadow: 0 0 1px #2051FF
+
+input:checked + .slider:before 
+    border: 2px solid #2051FF
+    -webkit-transform: translateX(18px)
+    -ms-transform: translateX(18px)
+    transform: translateX(18px)
+
+.slider.round 
+    border-radius: 40px
+
+.slider.round:before 
+    border-radius: 50%
+
+.social-accounts-list
+    display: flex
+    flex-direction: column
+    margin-top: 15px
+    &--item
+        padding: 20px 0
+        display: flex
+        flex-direction: row
+        align-items: center
+        border-bottom: 1px solid #E5E5ED
+        &:last-child
+            border-bottom: 1px solid #E5E5ED
+        h4
+            margin: 0 0 0 20px
+            font-weight: 500
+            font-size: 16px
+            line-height: 20px
+            color: #212126
+        div
+            display: flex
+            flex-direction: row
+            align-items: center
+            margin-left: auto
+            cursor: pointer
+            position: relative
+            span
+                color: #9E9EB2
+                margin-right: 24px
+            svg
+                position: absolute
+                right: 0
+                top: 0
+        &:first-child
+            div
+                span
+                    color: #E97171
+        &:last-child
+            h4
+                color: #9E9EB2
+            div
+                span
+                    color: #667FFF
+
