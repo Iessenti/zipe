@@ -1,4 +1,7 @@
 import React from 'react';
+import { generateRandomNumber } from 'shared/helpers';
+
+import 'assets/sass/ripple.sass';
 
 type RippleArrayType = {
     x: number;
@@ -31,29 +34,30 @@ const Ripple = () => {
             }, 850 * 4);
         }
         return () => window.clearTimeout(bounce);
-    }, [rippleArray.length, 850]);
+    }, [rippleArray.length]);
 
-  
     return (
         <div 
             onMouseDown={addRipple}
             className='ripple-container'
+            role="button"
+            tabIndex={0}
         >
             {rippleArray.length 
-                && rippleArray.map((ripple, index) => {
-                    return (
-                        <span
-                            key={"span" + index}
-                            style={{
-                                top: ripple.y,
-                                left: ripple.x,
-                                width: ripple.size,
-                                height: ripple.size,
-                            }}
-                        />
-                    );
-                }) 
-                || null}
+                && rippleArray.map(ripple => (
+                    <span
+                        key={generateRandomNumber()}
+                        style={{
+                            top: ripple.y,
+                            left: ripple.x,
+                            width: ripple.size,
+                            height: ripple.size,
+                        }}
+                    />
+                    )) 
+                || 
+                null
+            }
         </div>
     );
 }

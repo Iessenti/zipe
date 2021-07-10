@@ -1,6 +1,6 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group'
 
 import { routes } from 'routes';
 
@@ -8,24 +8,61 @@ import { AuthPage } from 'pages/AuthPage';
 import { MainPage } from 'pages/MainPage';
 import { SignOutPage } from 'pages/SignOutPage';
 
-const App = () => (
-  <BrowserRouter>
-    <Switch>
+import { Navbar, Footer } from 'components/CommonComponents';
+import { ProfilePopupContainer } from 'containers/ProfilePopupContainer';
+import { OverlayContext } from 'shared/Context';
 
-      <Route path={routes.main} exact>
-        <MainPage />
-      </Route>
+const App = () => {
 
-      <Route path={[routes.login, routes.registration, routes.code]} exact>
-        <AuthPage/>
-      </Route>
+  const [isProfilePopupOpened, setIsProfilePopupOpened] = useState(false);
+  const [isOverlay, setIsOverlay] = useState(false);
 
-      <Route path={routes.logout} exact>
-        <SignOutPage />
-      </Route>
+  return (
+    <BrowserRouter>
 
-    </Switch>
-  </BrowserRouter>
-)
+      <Navbar handleProfilePopup={setIsProfilePopupOpened}/>
+
+      <ProfilePopupContainer isOpened={isProfilePopupOpened}/>            
+          
+      <CSSTransition 
+          timeout={0}
+          in={isOverlay}
+          classNames={{
+            appear: 'overlay appear',
+            appearActive: 'overlay appear-active',
+            appearDone: 'overlay appear-done',
+            enter: 'overlay enter',
+            enterActive: 'overlay enter-active',
+            enterDone: 'overlay enter-done',
+            exit: 'overlay exit',
+            exitActive: 'overlay exit-active',
+            exitDone: 'overlay exit-done',
+           }}
+          unmountOnExit
+      >
+          <div/>
+      </CSSTransition>
+
+      <Switch>
+
+        <Route path={routes.main} exact>
+          <OverlayContext.Provider value={{isOverlay, setIsOverlay}}>
+            <MainPage/>
+          </OverlayContext.Provider>
+        </Route>
+
+        <Route path={[routes.login, routes.registration, routes.code]} exact>
+          <AuthPage/>
+        </Route>
+
+        <Route path={routes.logout} exact>
+          <SignOutPage />
+        </Route>
+
+      </Switch>
+      <Footer/>
+    </BrowserRouter>
+  )
+}
 
 export default App;

@@ -1,3 +1,3 @@
-import { Ripple } from "shared/RippleButton";
+import { Ripple } from "./Ripple";
 
 export { Ripple };

@@ -6,6 +6,11 @@ import App from './App';
 
 import store from './store';
 
+import 'rsuite/dist/styles/rsuite-default.css';
+
+import 'fonts.css';
+import 'assets/sass/index.sass';
+
 ReactDOM.render(
   <Provider store = {store}>
     <App />

@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
-import { SearchIcon } from '../../shared/icons';
-import RocketImage from '../../assets/images/rocket.png'
-import { Ripple } from '../../shared/RippleButton'
+import React, { useState, useContext } from 'react';
+import { Animation } from 'rsuite';
+
+import { Ripple } from 'components/Ripple';
+import { SearchIcon } from 'shared/icons';
+import RocketImage from 'assets/images/rocket.png';
+import { generateRandomNumber } from 'shared/helpers';
+import { OverlayContext } from 'shared/Context';
+
+import { MainPageResultSearch } from './MainPageResultSearch';
+
+const { Collapse } = Animation;
 
 const LABELS = [
     {text: 'дизайн сайта'},
@@ -10,8 +18,17 @@ const LABELS = [
     {text: '+ более 500 услуг'},
 ]
 
-export const MainPageSearch = () => {
+const MainPageSearch = () => {
+
     const [inputFocused, setInputFocused] = useState(false);
+
+    const {isOverlay, setIsOverlay} = useContext(OverlayContext);
+
+    const focusHandle = () => {
+        setInputFocused(!isOverlay);
+        setIsOverlay(!isOverlay);        
+    }
+
     return (
         <div className="main-page-search">
             <span className="main-page-search__title-text">Найдём проверенных исполнителей<br/>
@@ -26,28 +43,42 @@ export const MainPageSearch = () => {
                     value=""
                     placeholder="Ищите среди тысячи услуг и исполнителей"
                     className="main-page-search--form__input"
-                    onFocus={() => setInputFocused(true)}
-                    onBlur={() => setInputFocused(false)}
+                    onFocus={() => {
+                        focusHandle()
+                        document.body.style.overflowY = 'hidden'
+                    }}
+                    onBlur={() => {
+                        focusHandle()
+                        document.body.style.overflowY = 'scroll'
+                    }}
                     onChange={()=>{}}
                 />
-                <button className='main-page-search--form__make-order-btn'>
+                <div className='main-page-search--form__make-order-btn'>
                     <Ripple />
                     Создать заказ
                     <img src={RocketImage} alt=""/>
-                </button>
+                </div>
             </form>
+
+            <Collapse
+                in={inputFocused}
+                unmountOnExit
+            >
+                {(props: any, ref: any) => <MainPageResultSearch {...props} ref={ref}/>}
+            </Collapse>                       
+                
 
             <div className='main-page-search__labels-container'>
                 {
-                    LABELS.map( elem => {
-                        return (
-                            <div key='elem'>
-                                {elem.text}
-                            </div>
-                        )
-                    })
+                    LABELS.map(elem => (
+                        <div key={generateRandomNumber()}>  
+                            {elem.text}
+                        </div>
+                    ))
                 }
             </div>
         </div>
     )
 }
+
+export { MainPageSearch }

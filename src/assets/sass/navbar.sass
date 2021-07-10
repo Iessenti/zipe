@@ -1,80 +1,64 @@
 .navbar
     display: flex
-    padding: 14px 0
+    width: 100%
+    height: 60px
     background-color: #ffffff
     .container 
+        width: 1328px
+        height: 36px
         margin: auto
         display: flex
         flex-direction: row
         justify-content: space-between
         align-items: center
+        padding: 12px 0 12px 0
+        .logo
+            cursor: pointer
+            height: 12px
     div
         display: flex
         flex-direction: row
         align-items: center
-
-.tools 
-    &__img
-        margin-right: 40px
-    &--search
-        display: flex
-        flex-direction: row
-        align-items: center
-        border: 1.5px solid #E5E5ED
-        background-color: #F7F7FA
-        border-radius: 8px
-        box-sizing: border-box
-        padding: 8px 16px 9px 16px
-        height: 32px
-        transition: all .2s ease-in-out
-        &:hover
-            border: 1.5px solid #C5C5D9
-        &__input
-            outline: none
-            border: none
-            background: transparent
-            width: 312px
-            font-size: 14px
-            font-weight: 400
-            color: #212126
-            &::placeholder
-                color: #9E9EB2
-        &__img
-            margin-left: 17px
-            cursor: pointer
-
+        
 .info 
     &__make-order
-        cursor: pointer
-        color: #667FFF!important
-        font-weight: 500
-        font-size: 14px
+        cursor:pointer
         margin: 0
         text-decoration: none!important
         transition: all .2s ease-in-out
+        background-image: linear-gradient(45deg, #2046FB 0%, #34ACFF 100%)!important
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        font-family: als-font-60-variable
+        font-variation-settings: "wght" 500
+        font-size: 14px
+        line-height: 22px
+        font-feature-settings: 'calt' off
         &:hover
-            text-decoration: none!important
-            color: #9BACFF!important
+            opacity: .92
+        
+            
     &__divider
-        background: #E5E5ED
+        background: #D9D9E3
         width: 1px
-        height: 28px
-        margin: 0 24px
-    &__icon
+        height: 36px
+        margin: 0 0 0 24px
+    &__icon-container
         cursor: pointer
         display: flex
         align-items: center
-        margin-right: 24px
-        &.chat
-            position: relative
-        &:last-child
-            margin-right: 0
-    
-.chat-indicator 
-    background-color: #2051FF
-    border-radius: 50%
-    width: 8px
-    height: 8px
-    position: absolute
-    top: -2px
-    right: -2px
+        margin-left: 24px
+        position: relative
+        transition: all 0.2s ease-in-out
+
+        .indicator 
+            border-radius: 50%
+            width: 8px
+            height: 8px
+            position: absolute
+            top: -2px
+            right: -2px
+            transition: all .2s ease-in-out
+
+        &:hover .indicator
+            opacity: 0           

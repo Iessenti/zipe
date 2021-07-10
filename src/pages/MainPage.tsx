@@ -1,9 +1,15 @@
 import React from 'react';
 
+import { MainContainer } from 'containers/MainContainer';
+
 import 'assets/sass/mainPage.sass';
 
-export const MainPage = () => (
+const MainPage = () => (
     <div className="main-page">
-        <div className="container"/>
+        <div className="container">
+            <MainContainer/>
+        </div>
     </div>
 )
+
+export { MainPage };

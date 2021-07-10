@@ -1,104 +1,75 @@
 .footer
     display: flex
     background: #ffffff
-    padding: 40px 0 20px 0
+    height: 150px
+    position: relative
     .container 
         margin: auto
         display: flex
         flex-direction: column
-    &--separator
-        margin-top: 40px
-        background: #E5E5ED
-        height: 1px
-        width: 100%
-
-.footer-navigation
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    &--links
-        display: flex
-        flex-direction: row
-    &--make-order
-        display: flex
-        flex-direction: column
-        &__title
-            font-weight: 500
-            width: 195px
-            font-size: 20px
-            line-height: 25.58px
-            color: #212126
-            text-align: center
-            margin: 0 0 20px 0
-        &__btn
-            height: 52px
-            width: 195px
-            box-sizing: border-box
-            padding: 16px 32px
-            background: #436CFF
-            border-radius: 28px
-            font-weight: 500
-            font-size: 16px
-            line-height: 20.46px
-            color: #FFFFFF
-            overflow: hidden
-            outline: none
-            cursor: pointer
-            display: flex
-            flex-direction: row
-            position: relative
-            margin: 0 auto 38px auto 
-            img
-                margin-left: 4px
-                width: 18px
-
-.footer-navigation-column
-    display: flex
-    flex-direction: column
-    &:nth-child(1)
-        margin-right: 120px
-    &:nth-child(2)
-        margin-right: 125px
-    &:nth-child(3)
-        margin-right: 95px
-    h4
-        line-height: 19.2px
-        font-size: 16px
-        font-weight: 500
-        color: #212126
-        margin: 0 0 16px 0
-    a
-        text-decoration: none
-        line-height: 19.2px
-        font-size: 16px
-        font-weight: 400
-        color: #525264
-        margin-bottom: 12px
-        &:last-child
-            margin-bottom: 0
+        height: 100%
+        .separator
+            position: absolute
+            top: 108px
+            background: #E5E5ED
+            height: 1px
+            width: 100%
 
 .footer-info
     display: flex
     flex-direction: row
     justify-content: space-between
-    align-items: center
-    margin-top: 20px
+    position: relative
     &--company
         display: flex
         flex-direction: row
         align-items: center
+        cursor: pointer
+        margin-top: 24px
         span
             margin-left: 40px
+
+    &--menu
+        display: flex
+        flex-direction: row
+        margin-top: 24px
+        a 
+            margin-left: 16px
+            text-decoration: none
+            cursor: pointer
+            font-family: als-font-60-variable
+            font-variation-settings: "wght" 400
+            font-size: 16px
+            line-height: 24px
+            color: #3B3B45
+            transition: all 0.2s ease-in-out
+            &:hover
+                color: #60606B
+
     &--social
         display: flex
         flex-direction: row
+        align-self: flex-end
+        cursor: pointer
+        margin-top: 16px
+        a 
+            height: 24px
+            width: 24px
+            margin-left: 12px
+            transition: all 0.2s ease-in-out
+
+    &--bottom
+        position: absolute
+        display: flex
+        flex-direction: row
+        justify-content: space-between
         align-items: center
-        a
-            width: 20px
-            height: 20px
-            margin-right: 12px
-            img
-                width: 100%
-                height: 100%
-            &:last-child
-                margin-right: 0
+        height: 41px
+        bottom: 0
+        width: 100%
+        font-size: 14px
+        a 
+            text-decoration: none
+            color: #3B3B45
+            cursor: pointer
+

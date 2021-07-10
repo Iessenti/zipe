@@ -1,2 +1,2 @@
 declare module 'rsuite';
-declare module '';
+declare module 'react-transition-group';
