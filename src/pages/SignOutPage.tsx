@@ -9,6 +9,7 @@ export const SignOutPage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        localStorage.clear();
         dispatch(logoutFromAccountAction())
     })
 

@@ -36,8 +36,7 @@ export const registerAction = (registerParams: RegistrationType) => (dispatch: a
     .catch(() => dispatch(fetchUserErrorAction()));
 };
 
-export const sendRegisterCodeAction = (code: string) => (dispatch: any) => {
-  console.log(dispatch)
+export const sendRegisterCodeAction = (code: string) => () => {  
   authService 
     .registerCodeAuth(code)
     .then((response) => {

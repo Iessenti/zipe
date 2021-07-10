@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
-import {PrivateRoute} from "components/PrivateRoute"
-
 import { routes } from 'routes';
 
 import { AuthPage } from 'pages/AuthPage';
@@ -14,9 +12,9 @@ const App = () => (
   <BrowserRouter>
     <Switch>
 
-      <PrivateRoute path={routes.main} exact>
+      <Route path={routes.main} exact>
         <MainPage />
-      </PrivateRoute>
+      </Route>
 
       <Route path={[routes.login, routes.registration, routes.code]} exact>
         <AuthPage/>
