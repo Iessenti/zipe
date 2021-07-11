@@ -14,18 +14,17 @@ import { OverlayContext } from 'shared/Context';
 
 const App = () => {
 
-  const [isProfilePopupOpened, setIsProfilePopupOpened] = useState(false);
   const [isOverlay, setIsOverlay] = useState(false);
 
   return (
     <BrowserRouter>
 
-      <Navbar handleProfilePopup={setIsProfilePopupOpened}/>
+      <Navbar/>
 
-      <ProfilePopupContainer isOpened={isProfilePopupOpened}/>            
+      <ProfilePopupContainer/>
           
       <CSSTransition 
-          timeout={0}
+          timeout={200}
           in={isOverlay}
           classNames={{
             appear: 'overlay appear',

@@ -23,10 +23,11 @@ const MainPageSearch = () => {
     const [inputFocused, setInputFocused] = useState(false);
 
     const {isOverlay, setIsOverlay} = useContext(OverlayContext);
-
-    const focusHandle = () => {
+    
+    const handleSearchInput = (overflowVal: string) => {
         setInputFocused(!isOverlay);
-        setIsOverlay(!isOverlay);        
+        setIsOverlay(!isOverlay); 
+        document.body.style.overflowY = overflowVal;
     }
 
     return (
@@ -43,14 +44,8 @@ const MainPageSearch = () => {
                     value=""
                     placeholder="Ищите среди тысячи услуг и исполнителей"
                     className="main-page-search--form__input"
-                    onFocus={() => {
-                        focusHandle()
-                        document.body.style.overflowY = 'hidden'
-                    }}
-                    onBlur={() => {
-                        focusHandle()
-                        document.body.style.overflowY = 'scroll'
-                    }}
+                    onFocus={() => handleSearchInput("hidden")}
+                    onBlur={() => handleSearchInput("scroll")}
                     onChange={()=>{}}
                 />
                 <div className='main-page-search--form__make-order-btn'>
