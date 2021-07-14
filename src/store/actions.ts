@@ -2,7 +2,6 @@ import { routes } from 'routes';
 import { ZIPE_STORAGE_KEY } from '../consts';
 import AuthRequestService from '../services/AuthRequestService';
 import { OrderActionTypes } from './types/order';
-import { PopupActionTypes } from './types/popup';
 import { AuthType, LoginType, ProfileModel, RegistrationType, UserActionTypes } from './types/user';
 
 const fetchUserAction = () => ({type: UserActionTypes.FETCH_USER});
