@@ -21,7 +21,7 @@ const Ripple = () => {
         const x = event.pageX - (rippleContainer.x + window.pageXOffset) - (size / 2);
         const y = event.pageY - (rippleContainer.y + window.pageYOffset) - (size / 2);
         const newRipple = {x,y,size};
-        setRippleArray([...rippleArray, newRipple]);
+        setRippleArray([newRipple]);
     };
 
     React.useEffect(() => {
@@ -31,7 +31,7 @@ const Ripple = () => {
             bounce = window.setTimeout(() => {
                 setRippleArray([]);
                 window.clearTimeout(bounce);
-            }, 850 * 4);
+            }, 3400);
         }
         return () => window.clearTimeout(bounce);
     }, [rippleArray.length]);
