@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 
 import 'assets/sass/createOrder/orderDescription.sass';
 
+
 const OrderDescriptionTab = () => {
 
     const [form, setForm] = useState({
-        title: '', desc: '', fileNames: string []
-    })
-    const [files, setFiles] = useState( [] as any )
+        title: '', desc: ''
+    }) 
+    
+    const [files, setFiles] = useState<File | null>(null)   
 
     const filesHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFiles([...files, e.target.files])
-        if (e.target.files !== null) {
-            setForm({...form, fileNames: e.target.files.map( (elem:any) => elem)})
-        }
-        
+        setFiles(e.target.files[0])
+        console.log(files)
+        console.log(e.target.files)
     }
 
     return (
@@ -32,7 +32,7 @@ const OrderDescriptionTab = () => {
                             placeholder='Например, «Логотип для театра»' 
                             maxLength={50}
                             value={form.title} 
-                            onChange={ (e) => setForm({...form, [e.target.name]: e.target.value}) }
+                            onChange={ (e) => setForm({...form, title: e.target.value}) }
                         />
                         <span>{form.title.length}/50</span>
                     </div>
@@ -55,9 +55,7 @@ const OrderDescriptionTab = () => {
                     <div className='order-description--main--file-loader--input-place'>
                         <input type="file" name="file" multiple onChange={ e => filesHandler(e)}/>
                     </div>
-                    {
-                        form.fileNames.map( elem => <span>{elem}</span>)
-                    } 
+
                 </div>
             </div>
 
