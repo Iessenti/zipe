@@ -87,6 +87,7 @@
             width: 392px
             height: 338px
             margin-top: 50px
+            font-family: als-font-60-variable
             &--input-place
                 height: 100%
                 width: 100%
@@ -96,3 +97,44 @@
                 background: #FFFFFF
                 border: 1px dashed #5D78FF
                 border-radius: 6px
+                transition: all .2s ease-in-out
+                &--info
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    align-items: center
+                    height: 100px
+                    cursor: pointer
+                    h2
+                        color: #567BFF
+                        font-variation-settings: "wght" 400
+                        font-size: 20px
+                        line-height: 24px
+                    span
+                        font-size: 16px
+                        line-height: 24px
+                        color: #9E9EB0
+                
+                &:hover
+                    background: #E6EBFF
+
+            &--saved-files
+                margin-top: 16px
+                display: flex
+                flex-direction: column
+                border: 1px solid #E5E5ED
+                border-radius: 6px
+                &--element
+                    padding: 8px 16px
+                    display: flex
+                    flex-direction: row
+                    color: #525264
+                    font-size: 16px
+                    line-height: 24px
+                    border-bottom: 1px solid #E5E5ED
+                    &:last-child
+                        border: none
+                    &--icon
+                        margin-right: 8px
+                        margin-top: 4px
+                        display: flex

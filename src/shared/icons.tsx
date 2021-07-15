@@ -213,3 +213,18 @@ export const InputCross = () => (
         <path d="M1.67334 16.3311L16.3334 1.67096" stroke="#9E9EB0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
 )
+
+export const FilledCheckMark = () => (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="8" r="8" fill="#5D78FF"/>
+        <path d="M5.03687 8.59229L6.81458 10.3701" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M6.8147 10.3701L10.9628 6.22197" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+)
+
+export const FileUploadIcon = () => (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.66675 31.6665V31.6665C1.66675 34.1588 1.66675 35.405 2.20264 36.3332C2.55372 36.9412 3.05867 37.4462 3.66675 37.7973C4.59495 38.3332 5.84111 38.3332 8.33341 38.3332H31.6667C34.1591 38.3332 35.4052 38.3332 36.3334 37.7973C36.9415 37.4462 37.4464 36.9412 37.7975 36.3332C38.3334 35.405 38.3334 34.1588 38.3334 31.6665V31.6665" stroke="#567BFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M20 1.6665L10 11.6665M20 1.6665L30 11.6665M20 1.6665L20 28.3332" stroke="#567BFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+)
