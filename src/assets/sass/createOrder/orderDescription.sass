@@ -1,5 +1,7 @@
 .order-description
-
+    display: flex
+    flex-direction: column
+    align-items: center
     button
         display: flex
         flex-direction: row
@@ -43,6 +45,15 @@
                 border: 1px solid #D9D9E3
                 box-sizing: border-box
                 border-radius: 6px
+                position: relative
+                span
+                    position: absolute
+                    bottom: 4px
+                    right: 16px
+                    font-size: 12px
+                    line-height: 20px
+                    text-align: right
+                    color: #9E9EB0
 
             &--desc-input
                 height: 248px
@@ -74,3 +85,14 @@
             display: flex
             flex-direction: column
             width: 392px
+            height: 338px
+            margin-top: 50px
+            &--input-place
+                height: 100%
+                width: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                background: #FFFFFF
+                border: 1px dashed #5D78FF
+                border-radius: 6px
