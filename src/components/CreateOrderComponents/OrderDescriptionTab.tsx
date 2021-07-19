@@ -5,11 +5,18 @@ import {useDrop, DropTargetMonitor} from 'react-dnd';
 
 import { CSSTransition } from 'react-transition-group';
 
+import { useDispatch } from 'react-redux';
+import { OrderUIActionTypes } from 'store/types/orderUI';
+
 import 'assets/sass/createOrder/orderDescription.sass';
 
 import {FilledCheckMark, FileUploadIcon, CloseIcon} from 'shared/icons'
 
 const OrderDescriptionTab = () => {
+
+    const changeActiveStep = (value: number) => ({type: OrderUIActionTypes.CHANGE_STEP, payload: value })
+
+    const dispatch = useDispatch();
 
     const hiddenFileInput = useRef<HTMLInputElement>(null);
 
@@ -77,7 +84,7 @@ const OrderDescriptionTab = () => {
     }
 
     const isActive = canDrop && isOver;
-    let dropBlockClassName = "order-description--main--file-loader--input-place";
+    let dropBlockClassName = "file-loader--input-place";
     let iconColor = '#567BFF';
 
     if (files && files.length >= 3) {
@@ -89,12 +96,12 @@ const OrderDescriptionTab = () => {
     return (
         <div className="order-description">
 
-            <div className="order-description--main">
+            <div className="desciption-main">
 
-                <div className="order-description--main--form">
+                <div className="desciption-form">
                     <span>Название задачи</span>
 
-                    <div className='order-description--main--form--title-input'>
+                    <div className='desciption-form--title-input'>
                         <input 
                             name='title' 
                             type='text' 
@@ -108,7 +115,7 @@ const OrderDescriptionTab = () => {
 
                     <span>Описание задачи</span>
 
-                    <div className='order-description--main--form--desc-input'>
+                    <div className='desciption-form--desc-input'>
                         <textarea 
                             name='desc' 
                             placeholder='Расскажите о том, что хотите получить — вплоть до мелочей.' 
@@ -119,11 +126,11 @@ const OrderDescriptionTab = () => {
                         <span>{form.desc.length}/5000</span>
                     </div>
                 </div>
-
-                <div className="order-description--main--file-loader">
+                
+                <div className="file-loader">
                     <div className={dropBlockClassName} onClick={handleUploadClick} role='presentation' ref={drop}>
 
-                        <div className="order-description--main--file-loader--input-place--info">
+                        <div className="file-loader--input-place--info">
                             <FileUploadIcon fill={iconColor}/>
                             <h2>Загрузите файлы</h2>
                             <span>или перетяните их сюда</span>
@@ -141,14 +148,14 @@ const OrderDescriptionTab = () => {
                     {
                         files.length > 0
                         &&
-                        <div className="order-description--main--file-loader--saved-files">
+                        <div className="file-loader--saved-files">
                             {files.map(item => (
                                 <div 
-                                    className="order-description--main--file-loader--saved-files--element"
+                                    className="file-loader--saved-files--element"
                                     onMouseEnter={() => handleFileHover(item.name, 'show')}
                                     onMouseLeave={() => handleFileHover(item.name, 'hide')}
                                 >
-                                    <div className="order-description--main--file-loader--saved-files--element--icon">
+                                    <div className="file-loader--saved-files--element--icon">
                                         <FilledCheckMark/>
                                     </div>
                                     {fileNameHandler(item.name)}
@@ -156,15 +163,15 @@ const OrderDescriptionTab = () => {
                                         timeout={100}
                                         in={hoveredFile === item.name}
                                         classNames={{
-                                            appear: 'order-description--main--file-loader--saved-files--element__close appear',
-                                            appearActive: 'order-description--main--file-loader--saved-files--element__close appear-active',
-                                            appearDone: 'order-description--main--file-loader--saved-files--element__close appear-done',
-                                            enter: 'order-description--main--file-loader--saved-files--element__close enter',
-                                            enterActive: 'order-description--main--file-loader--saved-files--element__close enter-active',
-                                            enterDone: 'order-description--main--file-loader--saved-files--element__close enter-done',
-                                            exit: 'order-description--main--file-loader--saved-files--element__close exit',
-                                            exitActive: 'order-description--main--file-loader--saved-files--element__close exit-active',
-                                            exitDone: 'order-description--main--file-loader--saved-files--element__close exit-done',
+                                            appear: 'file-loader--saved-files--element__close appear',
+                                            appearActive: 'file-loader--saved-files--element__close appear-active',
+                                            appearDone: 'file-loader--saved-files--element__close appear-done',
+                                            enter: 'file-loader--saved-files--element__close enter',
+                                            enterActive: 'file-loader--saved-files--element__close enter-active',
+                                            enterDone: 'file-loader--saved-files--element__close enter-done',
+                                            exit: 'file-loader--saved-files--element__close exit',
+                                            exitActive: 'file-loader--saved-files--element__close exit-active',
+                                            exitDone: 'file-loader--saved-files--element__close exit-done',
                                         }}
                                         onClick={() => removeFile(item.name)}
                                         unmountOnExit
@@ -179,8 +186,7 @@ const OrderDescriptionTab = () => {
                     }
                 </div>
             </div>
-
-            <button type='button'>Продолжить</button>
+            <button type='button' onClick={ () => dispatch(changeActiveStep(3))}>Продолжить</button>
         </div>
     )
 }

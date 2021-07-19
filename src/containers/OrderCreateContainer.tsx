@@ -28,7 +28,9 @@ const OrderCreateContainer = () => {
             <div className="order-create--card">
                 <CardHeader
                     title="Создание заказа"
-                    subTitle="Выберите тип заказа"/>
+                    subTitle="Выберите тип заказа"
+                    showBox='1'    
+                />
                 <ChooseOrderTypeTab/>
             </div>
         )
@@ -47,7 +49,9 @@ const OrderCreateContainer = () => {
                 </button>
                 <CardHeader
                     title="Создание заказа"
-                    subTitle="Укажите нужную категорию в списке или воспользуйтесь поиском"/>
+                    subTitle="Укажите нужную категорию в списке или воспользуйтесь поиском"
+                    showBox='1'   
+                />
                 <ChooseOrderCategoryTab/>
             </div>
         )
@@ -65,7 +69,9 @@ const OrderCreateContainer = () => {
                 </button>
                 <CardHeader
                     title="Создание заказа"
-                    subTitle="Расскажите подробнее о вашей задаче"/>
+                    subTitle="Расскажите подробнее о вашей задаче"
+                    showBox='1'    
+                />
                 <OrderDescriptionTab/>
             </div>
         )
@@ -75,12 +81,16 @@ const OrderCreateContainer = () => {
         <div className="order-create--card">
             <button
                 type="button"
-                className="order-create--card__back">
-                    <img src={BackArrow} alt="back" />
+                className="order-create--card__back"
+                onClick={ () => dispatch(changeActiveStep(2))}
+            >
+                <img src={BackArrow} alt="back" />
             </button>
             <CardHeader
                 title="Создание заказа"
-                subTitle="Укажите бюджет и сроки для выполнения"/>
+                subTitle="Укажите бюджет и сроки для выполнения"
+                showBox='1'
+            />
             <OrderDetailsTab/>
         </div>
     )

@@ -10,6 +10,7 @@ import { AuthPage } from 'pages/AuthPage';
 import { MainPage } from 'pages/MainPage';
 import { SignOutPage } from 'pages/SignOutPage';
 import { CreateOrderPage } from 'pages/CreateOrderPage';
+import { FoundPerformersPage } from 'pages/FoundPerformersPage';
 
 import { Navbar, Footer } from 'components/CommonComponents';
 import { ProfilePopupContainer } from 'containers/ProfilePopupContainer';
@@ -56,6 +57,10 @@ const App = () => {
 
           <Route path={[routes.orderCreate, routes.orderSearch]} exact>
             <CreateOrderPage/>
+          </Route>
+
+          <Route path={routes.performersFound} exact>
+            <FoundPerformersPage />
           </Route>
 
           <Route path={[routes.login, routes.registration, routes.code]} exact>
