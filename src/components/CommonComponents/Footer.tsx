@@ -13,8 +13,10 @@ const Footer = () => {
     const [hovered, setHovered] = useState<string | null>(null);
 
     const isOrderCreatingPage = useRouteMatch(routes.orderCreate);
+    const isOrderSearchPage = useRouteMatch(routes.orderSearch);
+    const isFoundPerformersPage = useRouteMatch(routes.performersFound);
 
-    if (isOrderCreatingPage) {
+    if (isOrderCreatingPage || isOrderSearchPage || isFoundPerformersPage) {
         return null;
     }
 

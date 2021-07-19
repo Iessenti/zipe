@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 
+import { useDispatch } from 'react-redux';
+import { OrderUIActionTypes } from 'store/types/orderUI';
+
 import 'assets/sass/createOrder/orderDescription.sass';
 
 import {FilledCheckMark, FileUploadIcon} from 'shared/icons'
 
 const OrderDescriptionTab = () => {
+
+    const changeActiveStep = (value: number) => ({type: OrderUIActionTypes.CHANGE_STEP, payload: value })
+
+    const dispatch = useDispatch();
 
     const hiddenFileInput = React.useRef<HTMLInputElement>(null);
 
@@ -41,12 +48,12 @@ const OrderDescriptionTab = () => {
     return (
         <div className="order-description">
 
-            <div className="order-description--main">
+            <div className="desciption-main">
 
-                <div className="order-description--main--form">
+                <div className="desciption-form">
                     <span>Название задачи</span>
 
-                    <div className='order-description--main--form--title-input'>
+                    <div className='desciption-form--title-input'>
                         <input 
                             name='title' 
                             type='text' 
@@ -60,7 +67,7 @@ const OrderDescriptionTab = () => {
 
                     <span>Описание задачи</span>
 
-                    <div className='order-description--main--form--desc-input'>
+                    <div className='desciption-form--desc-input'>
                         <textarea 
                             name='desc' 
                             placeholder='Расскажите о том, что хотите получить — вплоть до мелочей.' 
@@ -72,10 +79,10 @@ const OrderDescriptionTab = () => {
                     </div>
                 </div>
 
-                <div className="order-description--main--file-loader">
-                    <div className='order-description--main--file-loader--input-place'>
+                <div className="file-loader">
+                    <div className='file-loader--input-place'>
 
-                        <div onClick={handleUploadClick} role='presentation' className='order-description--main--file-loader--input-place--info'>
+                        <div onClick={handleUploadClick} role='presentation' className='file-loader--input-place--info'>
                             <FileUploadIcon/>
                             <h2>Загрузите файлы</h2>
                             <span>или перетяните их сюда</span>
@@ -93,8 +100,8 @@ const OrderDescriptionTab = () => {
                     {
                         (filenames.length > 0)
                         ?
-                        <div className="order-description--main--file-loader--saved-files">
-                            {filenames.map( i => <div className="order-description--main--file-loader--saved-files--element"><div className="order-description--main--file-loader--saved-files--element--icon"><FilledCheckMark/></div>{i}</div>)}
+                        <div className="file-loader--saved-files">
+                            {filenames.map( i => <div className="file-loader--saved-files--element"><div className="file-loader--saved-files--element--icon"><FilledCheckMark/></div>{i}</div>)}
                         </div>
                         :
                         false
@@ -104,7 +111,7 @@ const OrderDescriptionTab = () => {
 
 
 
-            <button type='button'>Продолжить</button>
+            <button type='button' onClick={ () => dispatch(changeActiveStep(3))}>Продолжить</button>
         </div>
     )
 }

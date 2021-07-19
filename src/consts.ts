@@ -346,3 +346,48 @@ export const ORDER_CREATE_CATEGORIES = [
         ]
     },
 ]
+
+export const ORDER_SEARCH_PERFORMERS = [
+    {
+        name: 'Ирина Зайцева',
+        title: 'UI/UX дизайнер',
+        rate: '4.84',
+        projects: '120',
+        disputes: '2'
+    },
+    {
+        name: 'Михаил Староверческий',
+        title: 'UI/UX дизайнер',
+        rate: '4.84',
+        projects: '120',
+        disputes: '2'
+    },
+    {
+        name: 'Ирина Зайцева',
+        title: 'UI/UX дизайнер',
+        rate: '4.84',
+        projects: '120',
+        disputes: '2'
+    },
+    {
+        name: 'Ирина Зайцева',
+        title: 'UI/UX дизайнер',
+        rate: '4.84',
+        projects: '120',
+        disputes: '2'
+    },
+    {
+        name: 'Ирина Зайцева',
+        title: 'UI/UX дизайнер',
+        rate: '4.84',
+        projects: '120',
+        disputes: '2'
+    },
+    {
+        name: 'Ирина Зайцева',
+        title: 'UI/UX дизайнер',
+        rate: '4.84',
+        projects: '120',
+        disputes: '2'
+    },
+]
