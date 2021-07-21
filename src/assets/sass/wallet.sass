@@ -40,7 +40,7 @@
         display: flex
         flex-direction: column
         margin-left: 16px
-        h1
+        span
             color: #13131C
             font-size: 16px
             line-height: 24px
@@ -88,13 +88,13 @@
         .info
             display: flex
             flex-direction: column
-            h1
+            .title
                 font-family: als-font-60-variable
                 font-variation-settings: "wght" 500
                 font-size: 20px
                 line-height: 28px
                 color: #13131C
-            span 
+            .cash
                 color: #9E9EB0
                 font-size: 16px
                 line-height: 24px
@@ -136,13 +136,13 @@
             .bill-info
                 display: flex
                 flex-direction: column
-                h2
+                .bill-title
                     color: #13131C
                     font-size: 16px
                     line-height: 24px
                     font-family: als-font-60-variable
                     font-variation-settings: "wght" 500
-                span
+                .bill-desc
                     color: #9E9EB0
                     font-size: 14px
                     line-height: 22px
@@ -227,7 +227,6 @@
             line-height: 24px
         
 .active-orders
-
     .main
         .row
             .bill-icon
@@ -287,26 +286,7 @@
             color: #13131C
             font-family: als-font-60-variable
             font-variation-settings: "wght" 500
-        .arrows
-            display: flex
-            flex-direction: row
-            div
-                width: 28px
-                height: 28px
-                background: #FFFFFF
-                box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12)
-                border-radius: 6px
-                display: flex
-                justify-content: center
-                align-items: center
-                transition: all .2s ease-in-out
-                cursor: pointer
-                &:hover
-                    opacity: .72
-            .back
-                margin-right: 8px
-                svg
-                    transform: rotate(180deg)
+
     .stories-line
         display: flex
         flex-direction: row
@@ -356,8 +336,28 @@
                     font-size: 16px
                     line-height: 24px
                     color: #FFFFFF
-                    z-index: 999
+                    z-index: 200
 
+.arrows
+    display: flex
+    flex-direction: row
+    div
+        width: 28px
+        height: 28px
+        background: #FFFFFF
+        box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12)
+        border-radius: 6px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .2s ease-in-out
+        cursor: pointer
+        &:hover
+            opacity: .72
+    .back
+        margin-right: 8px
+        svg
+            transform: rotate(180deg)
 
 .wallet-operations-wrapper
     margin-top: 40px
@@ -369,11 +369,263 @@
         color: #13131C
         font-family: als-font-60-variable
         font-variation-settings: "wght" 500
+    
+    .calendar-input-wrapper
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 16px
+        .arrows
+            div
+                height: 40px
+                width: 40px
+                box-shadow: unset
+            .calendar
+                padding: 8px 39px
+                width: 144px
+                margin-right: 8px
+                font-size: 16px
+                line-height: 24px
+                color: #13131C
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 500
+                div
+                    margin-right: 8px
+                    svg
+                        path 
+                            stroke: #13131C
+                        rect 
+                            fill: #13131C
+
+        .search
+            padding: 8px 16px
+            width: 616px
+            background: #FAFAFC
+            border: 1px solid #D9D9E3
+            box-sizing: border-box
+            border-radius: 6px
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            input::placeholder
+                font-size: 16px
+                line-height: 24px
+                color: #9E9EB0!important
+                transition: all .2s ease-in-out
+            &:hover
+                input::placeholder
+                    color: #BABACB!important
+            input:focus .search
+                border: 1px solid #CACAE0
+
+    .filter-panel
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 12px
+        .categories
+            display: flex
+            flex-direction: row
+            span
+                margin-right: 32px
+                font-size: 16px
+                line-height: 24px
+                color: #9E9EB0
+                cursor: pointer
+                transition: all .2s ease-in-out
+                &:hover
+                    color: #60606B
+        
+        .filter
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            div
+                margin-left: 32px
+                display: flex
+                align-items: center
+                font-size: 16px
+                line-height: 24px
+                color: #13131C
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 500
+                cursor: pointer
+                transition: all .2s ease-in-out
+                &:hover
+                    color: #464650
+                    svg
+                        path
+                            transition: all .2s ease-in-out
+                            stroke: #464650
+                svg
+                    transition: all .2s ease-in-out
+                    margin-left: 8px
+
                     
+.date-transaction-wrapper
+    width: 100%
+    margin-top: 16px
+    padding: 24px 32px 0 32px
+    background: #FFFFFF
+    border-radius: 12px
+    display: flex
+    flex-direction: column
+    font-family: als-font-60-variable
+    span
+        font-size: 16px
+        line-height: 24px
+        color: #13131C
+        font-family: als-font-60-variable
+        font-variation-settings: "wght" 500
+        margin-bottom: 12px
+    div.transaction
+        display: flex
+        flex-direction: column
+        transition: all .4s ease-in-out
+        .main
+            width: 100%
+            margin-bottom: 32px
+            display: flex
+            flex-direction: row
+            align-items: center
+            cursor: pointer
+            .icon
+                margin-right: 16px
+                height: 48px
+                width: 48px
+                border-radius: 6px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: blue
 
 
+            .info
+                display: flex
+                flex-direction: column
+                justify-content: center
+                .title
+                    font-family: als-font-60-variable
+                    font-variation-settings: "wght" 500
+                    font-size: 18px
+                    line-height: 26px
+                    color: #13131C
+                    margin: 2px
+
+                .desc
+                    font-size: 14px
+                    line-height: 22px
+                    color: #3B3B45
+                    font-variation-settings: "wght" 400
+                    margin: 0
+                    i
+                        margin-left: 4px
+                        color: #567BFF   
+            .cash
+                margin-left: auto
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: flex-end
+                span
+                    margin: 0
+                .value
+                    font-size: 16px
+                    line-height: 24px
+                .date
+                    font-size: 14px
+                    line-height: 22px
+                    color: #3B3B45
+                    font-variation-settings: "wght" 400
+
+.additional-data
+    transition: all .4s ease
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: relative
+    font-family: als-font-60-variable
+    .main-block
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: 158px
+        .data
+            border: 1px solid #E6EBFF
+            box-sizing: border-box
+            border-radius: 6px
+            width: 568px
+            margin-right: 16px
+            padding: 16px 24px
+            .title
+                font-size: 18px
+                line-height: 26px
+                color: #13131C
+                font-variation-settings: "wght" 500
+                margin-bottom: 4px
+            .row
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: space-between
+                width: 100%
+                position: relative
                 
+                .title
+                    font-size: 14px
+                    line-height: 22px
+                    color: #9E9EB0
+                    width: fit-content
+                    background: #fff
+                    z-index: 300
+                .value
+                    font-size: 16px
+                    line-height: 24px
+                    color: #3B3B45
+                    width: fit-content
+                    z-index: 300
+                    background: #fff
+                .dashed
+                    width: 100%
+                    position: absolute
+                    box-sizing: border-box
+                    border-bottom: 1px dashed #CACAE0
 
+        .buttons-wrapper
+            display: flex
+            flex-direction: column
+            button
+                background: #FFFFFF
+                border: 1px solid #E6EBFF
+                border-radius: 6px
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: row
+                padding: 11px 28px
+                font-size: 16px
+                line-height: 24px
+                color: #567BFF
+                transition: all .2s ease-in-out
+                width: 232px
+                svg 
+                    margin-right: 8px
+                &:hover
+                    border: 1px solid #7996FF
+            .margin
+                margin: 7px 0
+            
+
+    .line
+        margin: 32px 0
+        width: 816px
+        height: 1px
+        background: #D9D9E3
+        border-radius: 2px
 
 
 

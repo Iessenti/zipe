@@ -34,7 +34,7 @@ const Stories = () => {
             <div className='stories-line'>
                 {
                     stories.map( elem => 
-                        <div className='story-block'>
+                        <div className='story-block' role='presentation' onClick={ () => console.log(1)}>
                             <div className='photo-box'>
                                 <div className='title'>{elem.title}</div> 
                                 <div className='overlay' />

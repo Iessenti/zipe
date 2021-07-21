@@ -27,7 +27,7 @@ const MiniProfile = () => {
             </div>
 
             <div className='mini-profile--info'>
-                <h1>Руслан Душечка</h1>
+                <span>Руслан Душечка</span>
                 <div>Профессионал</div>
             </div>
 

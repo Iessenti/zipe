@@ -29,13 +29,13 @@ const MyFinance = () => {
             
             <div className='finance-header'>
                 <div className='info'>
-                    <h1>Мои финансы</h1>
+                    <span className='title'>Мои финансы</span>
                     {
                         opened
                         ?
                         false
                         :
-                        <span>101 789 ₽</span>
+                        <span className='cash'>101 789 ₽</span>
                     }
                 </div>
                 <div 
@@ -56,8 +56,8 @@ const MyFinance = () => {
                         <div className='row'>
                             <div className='bill-icon' style={{background: '#E6EBFF'}}><SmallGradientWallet/></div>
                             <div className='bill-info'>
-                                <h2>Счёт ZIPE</h2>
-                                <span>В рублях (RUB)</span>
+                                <span className='bill-title'>Счёт ZIPE</span>
+                                <span className='bill-desc'>В рублях (RUB)</span>
                             </div>
                             <div className='bill-cash'>101 789<i>,7 ₽</i></div>
                         </div>
@@ -65,8 +65,8 @@ const MyFinance = () => {
                         <div className='row'>
                             <div className='bill-icon' style={{background: '#F6F6FA'}}><BlockedWalletIcon/></div>
                             <div className='bill-info'>
-                                <h2>Счёт ZIPE</h2>
-                                <span>
+                                <span className='bill-title'>Счёт ZIPE</span>
+                                <span className='bill-desc'>
                                     Зарезервировано 
                                     <div 
                                         className='question' 
@@ -83,8 +83,8 @@ const MyFinance = () => {
                         <div className='row'>
                             <div className='bill-icon'><img src={MiniFullEllipses} alt='ellipses'/></div>
                             <div className='bill-info'>
-                                <h2>Кешбэк</h2>
-                                <span>
+                                <span className='bill-title'>Кешбэк</span>
+                                <span className='bill-desc'>
                                     Профессионал – 2,5% 
                                     <div 
                                         className='question' 

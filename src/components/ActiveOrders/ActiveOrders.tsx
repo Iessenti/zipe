@@ -37,7 +37,7 @@ const ActiveOrders = () => {
         <div className='active-orders'>
             <div className='finance-header'>
                 <div className='info'>
-                    <h1>Активные заказы</h1>
+                    <span className='title'>Активные заказы</span>
                     {
                         opened
                         ?
@@ -74,8 +74,8 @@ const ActiveOrders = () => {
                                 <div className='row'>         
                                     <div className='bill-icon'><ProgressAngle/><img src={SmallIll} alt='small'/></div>
                                     <div className='bill-info'>
-                                        <h2>{elem.title}</h2>
-                                        <span>{elem.date}</span>
+                                        <span className='bill-title'>{elem.title}</span>
+                                        <span className='bill-desc'>{elem.date}</span>
                                     </div>
                                     <div className='bill-cash'><i>{elem.cash} ₽</i></div>
                                 </div>
