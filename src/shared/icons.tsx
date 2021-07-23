@@ -222,10 +222,17 @@ export const FilledCheckMark = () => (
     </svg>
 )
 
-export const FileUploadIcon = () => (
+export const FileUploadIcon = ({fill}: FillIconType) => (
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1.66675 31.6665V31.6665C1.66675 34.1588 1.66675 35.405 2.20264 36.3332C2.55372 36.9412 3.05867 37.4462 3.66675 37.7973C4.59495 38.3332 5.84111 38.3332 8.33341 38.3332H31.6667C34.1591 38.3332 35.4052 38.3332 36.3334 37.7973C36.9415 37.4462 37.4464 36.9412 37.7975 36.3332C38.3334 35.405 38.3334 34.1588 38.3334 31.6665V31.6665" stroke="#567BFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M20 1.6665L10 11.6665M20 1.6665L30 11.6665M20 1.6665L20 28.3332" stroke="#567BFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M1.66675 31.6665V31.6665C1.66675 34.1588 1.66675 35.405 2.20264 36.3332C2.55372 36.9412 3.05867 37.4462 3.66675 37.7973C4.59495 38.3332 5.84111 38.3332 8.33341 38.3332H31.6667C34.1591 38.3332 35.4052 38.3332 36.3334 37.7973C36.9415 37.4462 37.4464 36.9412 37.7975 36.3332C38.3334 35.405 38.3334 34.1588 38.3334 31.6665V31.6665" stroke={fill} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M20 1.6665L10 11.6665M20 1.6665L30 11.6665M20 1.6665L20 28.3332" stroke={fill} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+)
+
+export const CloseIcon = () => (
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.43872 1.43945L8.54945 8.55018" stroke="#9E9EB2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M1.44214 8.55225L8.55287 1.44152" stroke="#9E9EB2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
 )
 

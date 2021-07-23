@@ -98,6 +98,7 @@
                 border: 1px dashed #5D78FF
                 border-radius: 6px
                 transition: all .2s ease-in-out
+
                 &--info
                     display: flex
                     flex-direction: column
@@ -114,9 +115,20 @@
                         font-size: 16px
                         line-height: 24px
                         color: #9E9EB0
-                
+
                 &:hover
                     background: #E6EBFF
+
+                &.file-over
+                    background: #E6EBFF
+                &.disabled
+                    border: 1px dashed #D0DAFF
+                    div
+                        cursor: default!important
+                    h2
+                        color: #D0DAFF
+                    &:hover
+                        background: #FFFFFF
 
             &--saved-files
                 margin-top: 16px
@@ -132,9 +144,29 @@
                     font-size: 16px
                     line-height: 24px
                     border-bottom: 1px solid #E5E5ED
+                    align-items: center
                     &:last-child
                         border: none
                     &--icon
                         margin-right: 8px
-                        margin-top: 4px
                         display: flex
+                    &__close
+                        margin-left: auto
+                        border-radius: 50%
+                        background: #F7F7FA
+                        width: 20px
+                        height: 20px
+                        min-height: 20px
+                        min-width: 20px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        opacity: 0
+                        transition: all .2s ease-in-out
+                        cursor: pointer
+                        div
+                            width: fit-content
+                        &.enter
+                            opacity: 0
+                        &.enter-done 
+                            opacity: 1
