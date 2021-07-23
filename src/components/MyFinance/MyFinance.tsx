@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { Animation } from 'rsuite';
 
+import { Ripple } from 'components/Ripple';
+
 import MiniFullEllipses from 'assets/images/MiniFullEllipses.png';
 import { MiniWhitePlus, RollingCurve, SmallGradientWallet, BlockedWalletIcon, QuestionCircleIcon } from '../../shared/icons';
 
@@ -59,7 +61,7 @@ const MyFinance = () => {
                                 <span className='bill-title'>Счёт ZIPE</span>
                                 <span className='bill-desc'>В рублях (RUB)</span>
                             </div>
-                            <div className='bill-cash'>101 789<i>,7 ₽</i></div>
+                            <div className='bill-cash'>101 789<span>,7 ₽</span></div>
                         </div>
 
                         <div className='row'>
@@ -77,7 +79,7 @@ const MyFinance = () => {
                                     </div>
                                 </span>
                             </div>
-                            <div className='bill-cash'><i>99 789 ₽</i></div>
+                            <div className='bill-cash'><span>99 789 ₽</span></div>
                         </div>
 
                         <div className='row'>
@@ -95,7 +97,7 @@ const MyFinance = () => {
                                     </div>
                                 </span>
                             </div>
-                            <div className='bill-cash'>789<i>,5 ₽</i></div>
+                            <div className='bill-cash'>789<span>,5 ₽</span></div>
                         </div>
 
                     </div>}
@@ -125,7 +127,8 @@ const MyFinance = () => {
             }
             
 
-            <button type='button'>
+            <button type='button' className="ruslan-pedik">
+                <Ripple />
                 <MiniWhitePlus />
                 <span>Пополнить счёт</span>
             </button>

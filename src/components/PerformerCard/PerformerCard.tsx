@@ -39,11 +39,11 @@ const PerformerCard = ({name, title, rate, projects, disputes}: Props) => {
                 </div>
 
                 <div className='performer-card--main--cash'>
-                    <img src={CashBag} alt='cash'/>Выполнит работу за <i>2,500 ₽</i>
+                    <img src={CashBag} alt='cash'/>Выполнит работу за <span>2,500 ₽</span>
                 </div>
 
                 <div className='performer-card--main--time'>
-                    <img src={Calendar} alt='calendar'/>Срок выполнения <i>до 25 июля</i>
+                    <img src={Calendar} alt='calendar'/>Срок выполнения <span>до 25 июля</span>
                 </div>
 
                 <div className='performer-card--main--buttons'>

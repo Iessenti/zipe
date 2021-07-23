@@ -42,7 +42,7 @@ const WalletOperations = () => {
                             <div className='icon' style={{background: '#F6F6FA'}}><BlockedWalletIcon/></div>
                             <div className='info'>
                                 <span className='title'>{elem.title}</span>
-                                <span className='desc'>{elem.desc}<i>{elem.addDesc}</i></span>
+                                <span className='desc'>{elem.desc}<span>{elem.addDesc}</span></span>
                             </div>
                             <div className='cash'>
                                 <span className='value' style={{color: '#9E9EB0'}}>{elem.cash} ₽</span>
@@ -90,7 +90,7 @@ const WalletOperations = () => {
                             <div className='icon' style={{background: '#E6EBFF'}}><PlusWalletIcon/></div>
                             <div className='info'>
                                 <span className='title'>{elem.title}</span>
-                                <span className='desc'>{elem.desc}<i>{elem.addDesc}</i></span>
+                                <span className='desc'>{elem.desc}<span>{elem.addDesc}</span></span>
                             </div>
                             <div className='cash'>
                                 <span className='value' style={{color: '#4CC24C'}}>+ {elem.cash} ₽</span>
@@ -107,7 +107,7 @@ const WalletOperations = () => {
                             <div className='icon' style={{background: '#E6EBFF'}}><MinusWalletIcon/></div>
                             <div className='info'>
                                 <span className='title'>{elem.title}</span>
-                                <span className='desc'>{elem.desc}<i>{elem.addDesc}</i></span>
+                                <span className='desc'>{elem.desc}<span>{elem.addDesc}</span></span>
                             </div>
                             <div className='cash'>
                                 <span className='value' style={{color: '#13131C'}}>- {elem.cash} ₽</span>
@@ -123,7 +123,7 @@ const WalletOperations = () => {
                             <div className='icon' style={{background: '#FFE6E6'}}><BanCircleIcon/></div>
                             <div className='info'>
                                 <span className='title'>{elem.title}</span>
-                                <span className='desc'>{elem.desc}<i>{elem.addDesc}</i></span>
+                                <span className='desc'>{elem.desc}<span>{elem.addDesc}</span></span>
                             </div>
                             <div className='cash'>
                                 <span className='value' style={{color: '#FF3959'}}>- {elem.cash} ₽</span>

@@ -132,8 +132,8 @@ const OrderDescriptionTab = () => {
 
                         <div className="file-loader--input-place--info">
                             <FileUploadIcon fill={iconColor}/>
-                            <h2>Загрузите файлы</h2>
-                            <span>или перетяните их сюда</span>
+                            <div className="title">Загрузите файлы</div>
+                            <span className="desc">или перетяните их сюда</span>
                         </div>
 
                         <input 

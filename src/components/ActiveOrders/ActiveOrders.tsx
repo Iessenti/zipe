@@ -77,7 +77,7 @@ const ActiveOrders = () => {
                                         <span className='bill-title'>{elem.title}</span>
                                         <span className='bill-desc'>{elem.date}</span>
                                     </div>
-                                    <div className='bill-cash'><i>{elem.cash} ₽</i></div>
+                                    <div className='bill-cash'><span>{elem.cash} ₽</span></div>
                                 </div>
                             ))
                             :
