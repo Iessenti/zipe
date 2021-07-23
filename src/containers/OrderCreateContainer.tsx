@@ -39,14 +39,14 @@ const OrderCreateContainer = () => {
     if (activeStep === 1) {
         return (
             <div className="order-create--card">
-                <button
-                    type="button"
+                <div
                     className="order-create--card__back"
                     onClick={ () => dispatch(changeActiveStep(0))}
+                    role='presentation'
                 >
                         <img src={BackArrow} alt="back" />
                     
-                </button>
+                </div>
                 <CardHeader
                     title="Создание заказа"
                     subTitle="Укажите нужную категорию в списке или воспользуйтесь поиском"

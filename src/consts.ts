@@ -391,3 +391,76 @@ export const ORDER_SEARCH_PERFORMERS = [
         disputes: '2'
     },
 ]
+
+export const TRANSACTIONS = [
+    {
+        date: '22 июля',
+        body: [
+            {
+                id: '1',
+                title: 'Резервирование средств',
+                type: 'reserving',
+                desc: 'Для оплаты заказа',
+                addDesc: '"Дизайн лендинга"',
+                cash: '111 789',
+                date: '22.07.2021',
+                textDate: "22 июля",
+                time: '12:45',
+                number: '22443555'
+            },
+            {
+                id: '2',
+                title: 'Зачисление средств',
+                type: 'plus',
+                desc: 'С карты Mastercard *5229',
+                addDesc: '',
+                cash: '111 789',
+                date: '22.07.2021',
+                textDate: "22 июля",
+                time: '10:45',
+                number: '22443555'
+            }, 
+        ]
+    },
+    {
+        date: '21 июля',
+        body: [
+            {
+                id: '3',
+                title: 'Списание средств',
+                type: 'minus',
+                desc: 'Для оплаты заказа',
+                addDesc: '"Дизайн лендинга"',
+                cash: '111 789',
+                date: '21.07.2021',
+                textDate: "21 июля",
+                time: '22:02',
+                number: '22443555'
+            },
+            {
+                id: '4',
+                title: 'Вывод средств',
+                type: 'minus',
+                desc: 'С карты Mastercard *5229',
+                addDesc: '',
+                cash: '111 789',
+                date: '22.07.2021',
+                textDate: "22 июля",
+                time: '20:21',
+                number: '22443555'
+            }, 
+            {
+                id: '5',
+                title: 'Вывод средств',
+                type: 'blocked',
+                desc: 'С карты Mastercard *5229',
+                addDesc: '',
+                cash: '111 789',
+                date: '22.07.2021',
+                textDate: "22 июля",
+                time: '20:21',
+                number: '22443555'
+            }, 
+        ]
+    }
+]

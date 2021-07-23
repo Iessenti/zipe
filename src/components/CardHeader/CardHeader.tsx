@@ -11,7 +11,7 @@ type Props = {
 const CardHeader = ({ title, subTitle, showBox }: Props) => (
     <div className="order-tab-title">
         <div>
-            <h2>{ title }</h2>
+            <span className='title'>{ title }</span>
             {
                 (showBox === '1')
                 ?
