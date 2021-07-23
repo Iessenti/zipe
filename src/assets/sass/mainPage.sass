@@ -47,7 +47,7 @@
         box-shadow: 0px 6px 28px -4px rgba(86, 123, 255, 0.04)
         border-radius: 6px   
         background: #FFFFFF
-        z-index: 991
+        z-index: 9999999
         &__search-icon
             width: 13.5px
             height: 13.5px
@@ -75,8 +75,6 @@
             
         &__make-order-btn
             background: linear-gradient(45deg, #2046FB 0%, #34ACFF 100%)
-            // height: 48px
-            // width: 181px
             box-sizing: border-box
             padding: 12px 24px  
             border-radius: 4px
@@ -103,8 +101,6 @@
             box-shadow: 0px 6px 28px -4px rgba(86, 123, 255, 0.04)
             border: 1px solid #567BFF
             border-radius: 6px 6px 0 0
-            transition: all 0.4s ease-in-out
-
 
     &__labels-container
         display: flex
@@ -114,7 +110,8 @@
         z-index: 1
         div
             width: auto
-            max-height: 32px
+            min-height: 32px
+            height: 32px
             background: rgba(230, 235, 255, 0.5)
             border-radius: 4px
             margin-right: 8px
@@ -131,13 +128,13 @@
                 background: #E6EBFF
 
     &__input-answers
-        transition: all .4s ease-in-out
+        z-index: 9999
         div.scrollbar-container
             flex-direction: column
-            z-index: 999
+            z-index: 99999
             opacity: 1
             position: absolute
-            top: 216px
+            top: 212px
             width: 656px
             max-height: 408px
             height: auto
@@ -147,17 +144,19 @@
             border-radius: 0 0 6px 6px
             background-color: #fff
             overflow: hidden
-            padding-top: 7px
+            padding-top: 11px
             transition: all .4s ease-in-out
         &__element
             height: 72px
             width: 656px
-            
+            min-height: 72px
             padding: 12px 24px
             cursor: pointer
             display: flex
             flex-direction: row
             transition: all 0.2s ease-in-out
+            background: #ffffff
+            z-index: 999999
             &:hover
                 background: #F8F8FF
             &__img
@@ -201,6 +200,17 @@
         background: url('../images/main_page_bg.png') no-repeat
         background-size: cover
 
+.searchTransition-enter
+    opacity: 0
+.searchTransition-enter-active 
+    opacity: 1
+    transition: opacity .4s
+.searchTransition-exit
+    opacity: 1
+.searchTransition-exit-active
+    opacity: 0
+    transition: opacity .4s
+
 .main-page-popular
     display: flex
     flex-direction: column
@@ -223,7 +233,45 @@
         flex-direction: row
         flex-wrap: wrap
         padding-top: 28px
-        position: relative              
+        position: relative  
+        &__element
+            
+            height: 208px
+            min-width: 208px
+            margin-right: 6px
+            margin-left: 6px
+            margin-bottom: 16px
+            border-radius: 6px
+            padding: 20px 0 0 20px
+            overflow: hidden
+            cursor: pointer
+            transition: all .2s ease-in-out
+            position: relative
+            &__ripple
+                position: absolute
+                width: 100%
+                height: 100%
+                z-index: 20
+                margin-top: -20px
+                margin-left: -20px
+            &__title
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 500
+                font-size: 20px
+                line-height: 28px
+            &__type
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 400
+                font-size: 14px
+                line-height: 22px
+            &__img
+                position: absolute
+                img 
+                    object-fit: contain
+
+            &:hover
+                opacity: 0.84
+            
 
 
 .main-page-articles
@@ -340,7 +388,12 @@
     &__dark
         z-index: 12
         width: 1328px
+<<<<<<< HEAD
         height: fit-content
+=======
+        height: 56px
+        min-height: 56px
+>>>>>>> 0d5df38bffa5d4a67574c9fe381c1d843c49b29d
         border-radius: 6px
         display: flex
         flex-direction: row

@@ -20,7 +20,3 @@ const MainPagePopularOrders = () => (
 )
 
 export { MainPagePopularOrders }
-
-// return (
-//     <MainPageType title={elem.title} type={elem.type} color={elem.color} image={ TypeImage } width={elem.width} textColor={elem.textColor} top={elem.top} right={elem.right} heightImage={elem.heightImage} widthImage={elem.widthImage} smallTextColor={elem.smallTextColor}/>
-// )
