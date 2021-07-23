@@ -1,6 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from 'store/reducers';
+
+import { OrderUIActionTypes } from 'store/types/orderUI';
 
 import '../../assets/sass/stepTabs.sass'
 
@@ -13,12 +15,18 @@ const StepTabs = () => {
 
     const { orderSteps, activeOrderCreatingStep } = useSelector((state: RootState) => state.orderUI);
 
+    const changeActiveStep = (value: number) => ({type: OrderUIActionTypes.CHANGE_STEP, payload: value })
+
+    const dispatch = useDispatch();
+
     return (
         <div className="step-tabs">
             {
                 orderSteps && orderSteps.length && orderSteps.map(orderStep => (
                     <div 
                         className={`step-tabs--tab ${(activeOrderCreatingStep===orderStep.id) ? 'active' : iff(orderStep.isDone , 'done', false )}`}
+                        onClick={ () => dispatch(changeActiveStep(orderStep.id)) }
+                        role='presentation'
                         >
                         <div>
                             

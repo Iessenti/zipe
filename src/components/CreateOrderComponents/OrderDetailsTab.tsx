@@ -19,7 +19,7 @@ const OrderDetailsTab = () => {
                     {
                         showTooltip
                         ?
-                        <div className='order-details--element--input-wrapper--tooltip'>Text<div>o</div></div>
+                        <div className='order-details--element--input-wrapper--tooltip'>Text<div className='ledge'/></div>
                         :
                         false
                     }
@@ -65,7 +65,7 @@ const OrderDetailsTab = () => {
 
             <div className='order-details--shield-wrapper'>
                 <img src={ShieldImage} alt='shield' />
-                <p>Ваши средства защищены бесплатной безопасной сделкой. <i>Подробнее</i></p>
+                <p>Ваши средства защищены бесплатной безопасной сделкой. <span>Подробнее</span></p>
             </div>
 
             <div className='order-details--start-button'>

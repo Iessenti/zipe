@@ -84,8 +84,8 @@ const OrderDescriptionTab = () => {
 
                         <div onClick={handleUploadClick} role='presentation' className='file-loader--input-place--info'>
                             <FileUploadIcon/>
-                            <h2>Загрузите файлы</h2>
-                            <span>или перетяните их сюда</span>
+                            <span className='title'>Загрузите файлы</span>
+                            <span className='desc'>или перетяните их сюда</span>
                         </div>
 
                         <input 
