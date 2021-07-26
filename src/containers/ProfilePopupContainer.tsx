@@ -3,18 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 
 import { RootState } from 'store/reducers';
-import { PopupActionTypes } from 'store/types/popup';
+import { PopupProfileActionTypes } from 'store/types/popupProfile';
 
 import { ProfilePopup } from 'components/CommonComponents/ProfilePopup';
 
 const ProfilePopupContainer = () => {
 
-    const handleProfilePopupAction = (value: boolean) => ({type: PopupActionTypes.PROFILE_POPUP, payload: value});
-    const setTimeoutProfilePopupAction = (value: number | null) => ({type: PopupActionTypes.SET_PROFILE_POPUP_TIMEOUT, payload: value});
+    const handleProfilePopupAction = (value: boolean) => ({type: PopupProfileActionTypes.PROFILE_POPUP, payload: value});
+    const setTimeoutProfilePopupAction = (value: number | null) => ({type: PopupProfileActionTypes.SET_PROFILE_POPUP_TIMEOUT, payload: value});
 
     const dispatch = useDispatch();
 
-    const profilePopupInstance = useSelector((state: RootState) => state.popup);
+    const profilePopupInstance = useSelector((state: RootState) => state.popupProfile);
 
     return (
         <CSSTransition

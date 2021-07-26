@@ -22,6 +22,17 @@
             justify-content: center
             align-items: center
             cursor: pointer
+            transition: all .2s ease-in-out
+            svg
+                path 
+                    transition: all .2s ease-in-out
+            &:hover
+                svg.cross
+                    path    
+                        stroke: #BABACB
+                svg.search-input
+                    path 
+                        fill: #BABACB
         &--input
             outline: none
             border: none

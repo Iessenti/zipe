@@ -5,6 +5,7 @@ export const routes = {
     performersFound: '/performers-found',
     wallet: '/wallet',
     walletSettings: '/wallet-settings',
+    notifications: '/notifications',
     login: '/sign-in',
     registration: '/sign-up',
     code: '/code',

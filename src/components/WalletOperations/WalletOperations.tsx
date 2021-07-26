@@ -146,9 +146,9 @@ const WalletOperations = () => {
 
             <div className='calendar-input-wrapper'>
                 <div className='arrows'>
-                    <div className='back'><CellButtonNext fill='#000'/></div>
+                    <div className='back'><CellButtonNext iconProperty='#000'/></div>
                     <div className='calendar'><div><MiniCalendarIcon/></div>Июль</div>
-                    <div><CellButtonNext fill='#000'/></div>
+                    <div><CellButtonNext iconProperty='#000'/></div>
                 </div>
                 <div className='search'><input type='text' placeholder='Найдите любые операции и события'/><SearchIcon /></div>
             </div>

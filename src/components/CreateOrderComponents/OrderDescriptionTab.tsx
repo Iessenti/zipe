@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
 import {NativeTypes} from 'react-dnd-html5-backend';
 import {useDrop, DropTargetMonitor} from 'react-dnd';
@@ -116,13 +117,17 @@ const OrderDescriptionTab = () => {
                     <span>Описание задачи</span>
 
                     <div className='desciption-form--desc-input'>
+                        
                         <textarea 
                             name='desc' 
                             placeholder='Расскажите о том, что хотите получить — вплоть до мелочей.' 
                             maxLength={5000}
                             value={form.desc} 
                             onChange={ (e) => setForm({...form, [e.target.name]: e.target.value})}
-                        />
+                        >
+                            <PerfectScrollbar className='scrollbar-container ps'>0</PerfectScrollbar>
+                        </textarea>
+                        
                         <span>{form.desc.length}/5000</span>
                     </div>
                 </div>
@@ -131,7 +136,7 @@ const OrderDescriptionTab = () => {
                     <div className={dropBlockClassName} onClick={handleUploadClick} role='presentation' ref={drop}>
 
                         <div className="file-loader--input-place--info">
-                            <FileUploadIcon fill={iconColor}/>
+                            <FileUploadIcon iconProperty={iconColor}/>
                             <div className="title">Загрузите файлы</div>
                             <span className="desc">или перетяните их сюда</span>
                         </div>

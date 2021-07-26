@@ -29,18 +29,18 @@ const ChooseOrderCategoryTab = () => {
                 />
                 <div className="order-category--form--icon" onClick={ () => setInputText('')} role='presentation'>
                     {
-                        (inputText !== '')
+                        inputText.length
                         ?
                         <InputCross/>
                         :
-                        <SearchIcon />
+                        <SearchIcon/>
                     }
                     
                 </div>
             </div>
             
             {
-                (inputText === '')
+                !inputText.length 
                 ?
                     <div className="order-category--all">
                         {

@@ -13,10 +13,12 @@ import { CreateOrderPage } from 'pages/CreateOrderPage';
 import { FoundPerformersPage } from 'pages/FoundPerformersPage';
 import { WalletPage } from 'pages/WalletPage';
 import { WalletSettingsPage } from 'pages/WalletSettingsPage';
+import { NotificationsPage } from 'pages/NotificationsPage';
 
 import { Navbar, Footer } from 'components/CommonComponents';
 import { ProfilePopupContainer } from 'containers/ProfilePopupContainer';
 import { OverlayContext } from 'shared/Context';
+import { NotificationsPopupContainer } from 'containers/NotificationsPopupContainer';
 
 const App = () => {
 
@@ -29,6 +31,8 @@ const App = () => {
         <Navbar/>
 
         <ProfilePopupContainer/>
+
+        <NotificationsPopupContainer/>
             
         <CSSTransition 
             timeout={200}
@@ -71,6 +75,10 @@ const App = () => {
 
           <Route path={routes.walletSettings} exact>
             <WalletSettingsPage />
+          </Route>
+
+          <Route path={routes.notifications} exact>
+            <NotificationsPage/>
           </Route>
 
           <Route path={[routes.login, routes.registration, routes.code]} exact>

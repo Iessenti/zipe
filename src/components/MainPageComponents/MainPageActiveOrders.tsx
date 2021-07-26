@@ -42,7 +42,7 @@ const MainPageActiveOrders = () => {
                         onMouseEnter={() => setHovered({...hovered, icon: true})}
                         onMouseLeave={() => setHovered({...hovered, icon: false})}
                     >
-                        <CellButtonNext fill={ hovered ? '#464650' : '#13131C' }/>
+                        <CellButtonNext iconProperty={ hovered ? '#464650' : '#13131C' }/>
                     </span>
 
                     <div className='main-page-offers__dark__runner' style={{width: runner.width, transition: runner.animation}}/>

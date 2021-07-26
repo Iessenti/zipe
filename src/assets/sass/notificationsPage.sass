@@ -1,0 +1,80 @@
+.notifications-page-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+
+    .container
+        width: 1328px
+        max-width: 1328px
+        min-width: 1328px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        font-family: als-font-60-variable
+        font-variation-settings: "wght" 400
+
+.date-container
+    width: 100%
+    background: #fff
+    margin: 8px 0
+    border-radius: 12px
+    padding: 24px 40px 32px 40px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    .date-header
+        font-size: 16px
+        line-height: 24px
+        color: #13131C
+        font-variation-settings: "wght" 500
+
+    .element
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-top: 32px
+        position: relative
+        .notification-icon
+            height: 48px
+            width: 48px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 6px
+            margin-right: 16px
+
+        .info
+            display: flex
+            flex-direction: column
+
+            .title
+                font-size: 18px
+                line-height: 26px
+                color: #13131C
+                font-variation-settings: "wght" 500
+            .desc
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 400
+                font-size: 14px
+                line-height: 22px
+                color: #13131C
+                .cash
+                    font-variation-settings: "wght" 500
+                .blue
+                    color: #567BFF
+        
+        .date
+            position: absolute
+            right: 64px
+
+        .menu-circles
+            position: absolute
+            right: 8px
+            cursor: pointer
+            svg path 
+                transition: all .2s ease-in-out
+            &:hover svg path
+                fill: #60606B

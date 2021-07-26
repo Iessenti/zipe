@@ -6,9 +6,9 @@ const WalletSettingsPage = () => {
     console.log('WalletSettingsPage')
 
     return (
-        <>
+        <div className='wallet-settings-wrapper'>
             <WalletSettingsContainer />
-        </>
+        </div>
     )   
 }
 

@@ -9,7 +9,7 @@ import 'assets/sass/createOrder/readyPerformers.sass';
 
 const FoundPerformersContainer = () => (
         <div className="ready-performers--wrapper" >
-            <div className='back'>
+            <div className='back blue-span'>
                 <LightBackArrow />
                 Назад к результатам
             </div>

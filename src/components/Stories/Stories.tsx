@@ -26,8 +26,8 @@ const Stories = () => {
             <div className='header'>
                 <span>Для Вас</span>
                 <div className='arrows'>
-                    <div className='back'><CellButtonNext fill='#000'/></div>
-                    <div><CellButtonNext fill='#000'/></div>
+                    <div className='back'><CellButtonNext iconProperty='#000'/></div>
+                    <div><CellButtonNext iconProperty='#000'/></div>
                 </div>
             </div>
 

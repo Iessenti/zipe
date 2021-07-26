@@ -19,14 +19,14 @@ const MainPageBanner = () => {
                     <div 
                         onMouseEnter={() => setHovered('apple')} 
                         onMouseLeave={() => setHovered(null)}>
-                        <AppleIcon fill={ (hovered === 'apple') ? '#2046FB' : '#fff' }/>
+                        <AppleIcon iconProperty={ hovered === 'apple' ? '#2046FB' : '#fff' }/>
                         <span>App Store</span>
                     </div>
 
                     <div 
                         onMouseEnter={() => setHovered('google')} 
                         onMouseLeave={() => setHovered(null)}>
-                        <GoogleIcon fill={ (hovered === 'google') ? '#2046FB ' : '#fff' }/>
+                        <GoogleIcon iconProperty={ hovered === 'google' ? '#2046FB ' : '#fff' }/>
                         <span>Google Play</span>
                     </div>
                 </div>

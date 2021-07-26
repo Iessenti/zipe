@@ -25,6 +25,8 @@
             cursor: pointer
             svg
                 margin-right: 8px
+            &:hover
+                
         
     & .cards-wrapper
         display: flex
@@ -45,7 +47,7 @@
             transition: all .2s ease-in-out
             cursor: pointer
             &:hover
-                background: rgba(255, 255, 255, 0.16)
+                opacity: 0.84
             img
                 width: 44px
                 height: 44px
@@ -53,16 +55,16 @@
             &--info
                 display: flex
                 flex-direction: column
-                h1
+                .name
                     font-size: 16px
                     line-height: 24px
                     color: #13131C
-                    font-variation-settings: "wght" 400
+                    font-variation-settings: "wght" 500
                     text-overflow: ellipsis
                     white-space: nowrap
                     overflow: hidden
                     width: 157px
-                span
+                .title
                     font-size: 12px
                     line-height: 20px
                     color: #60606B

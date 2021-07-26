@@ -25,7 +25,10 @@ const StepTabs = () => {
                 orderSteps && orderSteps.length && orderSteps.map(orderStep => (
                     <div 
                         className={`step-tabs--tab ${(activeOrderCreatingStep===orderStep.id) ? 'active' : iff(orderStep.isDone , 'done', false )}`}
-                        onClick={ () => dispatch(changeActiveStep(orderStep.id)) }
+                        onClick={ () => {
+                            if (orderStep.id <= activeOrderCreatingStep) {
+                                dispatch(changeActiveStep(orderStep.id)) 
+                            }}}
                         role='presentation'
                         >
                         <div>
@@ -33,7 +36,7 @@ const StepTabs = () => {
                                 <div className='step-tabs--tab--num'>
                                 {
                                     
-                                    (activeOrderCreatingStep===orderStep.id)
+                                    activeOrderCreatingStep===orderStep.id
                                     ?
                                     <span>{orderStep.id + 1}</span>
                                     : 

@@ -14,7 +14,10 @@ const ReadyPerformerCard = ({name, title, rate}: Props) => {
     return (
         <div className='card'>
             <img src={ProfileImage} alt='profile' />
-            <div className='card--info'><h1>{name}</h1><span>{title}</span></div>
+            <div className='card--info'>
+                <span className='name'>{name}</span>
+                <span className='title'>{title}</span>
+            </div>
             <div className='card--star'><img src={IconStar} alt='star'/>{rate}</div>
         </div>
     )

@@ -6,14 +6,18 @@ import { StepTabs } from 'components/StepTabs';
 import {LogoIcon, ChatIcon, BellIcon, ProfileIcon, CircleIndicator} from 'shared/icons';
 
 import { routes } from 'routes';
-import { PopupActionTypes } from 'store/types/popup';
+import { PopupProfileActionTypes } from 'store/types/popupProfile';
+import { PopupNotificationsActionTypes } from 'store/types/popupNotifications'
 
 import 'assets/sass/navbar.sass';
 
 const Navbar = () => {
 
-    const handleProfilePopupAction = (value: boolean) => ({type: PopupActionTypes.PROFILE_POPUP, payload: value});
-    const setTimeoutProfilePopupAction = (value: number | null) => ({type: PopupActionTypes.SET_PROFILE_POPUP_TIMEOUT, payload: value});
+    const handleProfilePopupAction = (value: boolean) => ({type: PopupProfileActionTypes.PROFILE_POPUP, payload: value});
+    const setTimeoutProfilePopupAction = (value: number | null) => ({type: PopupProfileActionTypes.SET_PROFILE_POPUP_TIMEOUT, payload: value});
+
+    const handleNotificationsPopupAction = (value: boolean) => ({type: PopupNotificationsActionTypes.NOTIFICATIONS_POPUP, payload: value});
+    const setTimeoutNotificationsPopupAction = (value: number | null) => ({type: PopupNotificationsActionTypes.SET_NOTIFICATIONS_POPUP_TIMEOUT, payload: value});
 
     const [iconHover, setIconHover] = useState({
         chat: '#13131C',
@@ -62,17 +66,26 @@ const Navbar = () => {
                         onMouseLeave={ () => setIconHover({...iconHover, chat: '#13131C'})}
                     >
                         <div className="info__icon-container__icon">
-                            <ChatIcon fill={iconHover.chat} />
+                            <ChatIcon iconProperty={iconHover.chat} />
                         </div>
                         <div className="indicator"><span><CircleIndicator /></span></div>
                     </div>
                     <div 
                         className="info__icon-container"
-                        onMouseEnter={ () => setIconHover({...iconHover, bell: '#464650'})}
-                        onMouseLeave={ () => setIconHover({...iconHover, bell: '#13131C'})}
+                        onMouseEnter={ () => {
+                            setIconHover({...iconHover, bell: '#464650'})
+                            dispatch(handleNotificationsPopupAction(true))
+                        }}
+                        onMouseLeave={ () => {
+                            setIconHover({...iconHover, bell: '#13131C'})
+                            const timeoutNotifications = window.setTimeout(() => {
+                                dispatch(handleNotificationsPopupAction(false))
+                            })
+                            dispatch(setTimeoutNotificationsPopupAction(timeoutNotifications))
+                        }}
                     >
                         <div className="info__icon-container__icon">
-                            <BellIcon fill={iconHover.bell}/>
+                            <BellIcon iconProperty={iconHover.bell}/>
                         </div>
                         <div className="indicator"><span><CircleIndicator /></span></div>
                     </div>

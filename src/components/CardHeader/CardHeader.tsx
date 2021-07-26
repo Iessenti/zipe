@@ -13,11 +13,9 @@ const CardHeader = ({ title, subTitle, showBox }: Props) => (
         <div>
             <span className='title'>{ title }</span>
             {
-                (showBox === '1')
-                ?
+                showBox === '1'
+                &&
                 <img src={TypeTitleIllustration} alt="box" />
-                :
-                false
             }
         </div>
         <span>{ subTitle }</span>

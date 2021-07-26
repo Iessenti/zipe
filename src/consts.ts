@@ -6,6 +6,13 @@ export const AuthPageTypes = {
     code: 'CODE'
 }
 
+export const ORDER_CREATE_STEPS = {
+    CHOOSE_TYPE: 'CHOOSE_TYPE',
+    CHOOSE_CATEGORY: "CHOOSE_CATEGORY",
+    SET_DETAILS: 'SET_DETAILS',
+    SET_TIME_BUDGET: 'SET_TIME_BUDGET'
+}
+
 export const MAIN_PAGE_TYPES = [
     {
         title: 'Логотип',
@@ -461,6 +468,173 @@ export const TRANSACTIONS = [
                 time: '20:21',
                 number: '22443555'
             }, 
+        ]
+    }
+]
+
+export const NOTIFICATIONS = [
+    {
+        date: '16 июля',
+        body: [
+            {
+                type: 'finances',
+                subType: '',
+                title: 'Резервирование средств',
+                description1: 'На вашем счёте были зарезервированы ',
+                cash: '160 000 ₽',
+                desciption2: ' для оплаты заказа ',
+                blue: '“Дизайн лендинга”',
+                description3: '',
+                time: '15:00'
+            },
+            {
+                type: 'finances',
+                subType: '',
+                title: 'Зачисление средств',
+                description1: 'На ваш счёт были зачислены ',
+                cash: '160 000 ₽',
+                desciption2: ' с карты Mastercard *5229',
+                blue: '',
+                description3: '',
+                time: '14:32'
+            },
+            {
+                type: 'security',
+                subType: '',
+                title: 'Блокирование счёта',
+                description1: 'Ваш счёт был заблокирован. Для разблокировки обратитесь в',
+                cash: '',
+                desciption2: '',
+                blue: ' поддержку Зайпа.',
+                description3: '',
+                time: '13:10'
+            },
+            {
+                type: 'cashback',
+                subType: '',
+                title: 'Начисление кешбэка',
+                description1: 'Вам начислен кешбэк ',
+                cash: '700 ₽',
+                desciption2: ' за заказ ',
+                blue: '“Дизайн лендинга”.',
+                description3: ' Оплатите им до 2,5% от суммы заказа.',
+                time: '12:07'
+            },
+            {
+                type: 'projects',
+                subType: 'working',
+                title: 'Обновление статуса заказа',
+                description1: '',
+                cash: '',
+                desciption2: '',
+                blue: '“Дизайн лендинга”',
+                description3: ' был переведён в статус “В работе”',
+                time: '11:46'
+            },
+        ]
+    },
+    {
+        date: '15 июля',
+        body: [
+            {
+                type: 'service',
+                subType: 'zipe',
+                title: 'Обновление политики ZIPE',
+                description1: 'Политика ZIPE была обновлена, пожалуйста, ознакомьтесь с ней',
+                cash: '',
+                desciption2: '',
+                blue: ' здесь',
+                description3: '',
+                time: '17:17'
+            },
+            {
+                type: 'security',
+                subType: '',
+                title: 'Вход в аккаунт',
+                description1: 'Был совершён вход в аккаунт с нового устройства. Если это были не вы, обратитесь в',
+                cash: '',
+                desciption2: '',
+                blue: ' поддержку Зайпа.',
+                description3: '',
+                time: '16:16'
+            },
+            {
+                type: 'projects',
+                subType: 'finding',
+                title: 'Начат поиск исполнителя',
+                description1: 'Вы начали поиск исполнителя на заказ',
+                cash: '',
+                desciption2: '',
+                blue: ' “Дизайн лендинга”',
+                description3: '',
+                time: '15:15'
+            },
+            {
+                type: 'projects',
+                subType: 'finding',
+                title: 'Поиск завершён',
+                description1: '',
+                cash: '25 ',
+                desciption2: 'исполнителей на заказ ',
+                blue: '“Дизайн лендинга”',
+                description3: ' найдено. Осталось выбрать!',
+                time: '14:14'
+            },
+            {
+                type: 'projects',
+                subType: 'performer',
+                title: 'Вы назначили исполнителя',
+                description1: 'Рустам Сабуров был выбран исполнителем на заказ ',
+                cash: '',
+                desciption2: '',
+                blue: '“Дизайн лендинга”',
+                description3: '',
+                time: '13:13'
+            },
+            {
+                type: 'projects',
+                subType: 'performer',
+                title: 'Непрочитанные сообщения',
+                description1: 'У вас ',
+                cash: '5',
+                desciption2: ' новых сообщений от ',
+                blue: 'Рустама Сабурова',
+                description3: '',
+                time: '12:12'
+            },
+            {
+                type: 'service',
+                subType: 'support',
+                title: 'Ответ от поддержки',
+                description1: 'Вы получили ответ от поддержки на вопрос ',
+                cash: '',
+                desciption2: '',
+                blue: '“Как поднять рейтинг?”',
+                description3: '',
+                time: '11:11'
+            },
+            {
+                type: 'service',
+                subType: 'judge',
+                title: 'Ответ арбитража',
+                description1: 'Получено решение арбитража по заказу ',
+                cash: '',
+                desciption2: '',
+                blue: '“Дизайн лендинга”',
+                description3: '',
+                time: '10:10'
+            },
+            {
+                type: 'service',
+                subType: 'unique',
+                title: 'Уникальное предложение',
+                description1: 'Специально для вас ',
+                cash: 'с 12 июля по 16 июля ',
+                desciption2: 'доступна акция ',
+                blue: ' “Приведи друга и получите по 200 ₽ на первый заказ”',
+                description3: '',
+                time: '9:09'
+            },
         ]
     }
 ]

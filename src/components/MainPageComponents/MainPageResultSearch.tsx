@@ -35,10 +35,12 @@ const MainPageResultSearch = React.forwardRef(({ ...props}, ref: any) => {
                                 <span className='type'>{elem.type}</span>
                             </div>
                             <CurveIcon 
-                                color={
-                                    (index === hovered.index) ?
-                                    hovered.type :
-                                    null
+                                iconProperty={
+                                    index === hovered.index
+                                    ?
+                                    hovered.type 
+                                    :
+                                    ''
                                 }
                             />
                         </div>
