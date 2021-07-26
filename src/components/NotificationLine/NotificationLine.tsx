@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-
+import { CSSTransition } from 'react-transition-group'
 import { SetNoficationIcon } from '../../shared/SetNotificationIcon'
-import { CirclesMenuIcon } from '../../shared/icons'
+import { CirclesMenuIcon, MiddleQuestionCircle, NoCircleIcon } from '../../shared/icons'
 
 interface NotificationContent {
     type: string;
@@ -19,12 +19,37 @@ interface NotificationContent {
 const NotificationLine = ({type, subType, title, description1, cash, desciption2, blue, description3, date, time}: NotificationContent) => {
     
     const [showMenu, setShowMenu] = useState<boolean>(false)
+    const [showContextWindow, setShowContextWindow] = useState<boolean>(false)
+    
+    // короче, блять... этот код почему-то считывает первый клик, даже когда контекстного окна нет, поэтому лучшее решение, что я
+    // придумал - это счётчик с обнулением и проверкой. Работает как швейцарские, блин, часы. Через 12 минут новая серия Рика и Морти...
+    let x: number = 0;
 
+    
+
+            window.addEventListener('click', e => {
+                if (showContextWindow && showMenu) {
+                    const target = e.target as HTMLElement
+                    const menu = document.querySelector('.context-window') as HTMLElement;
+                    const itsMenu = target === menu || menu.contains(target);
+                    x += 1;
+                    if (!itsMenu && (x>1) && showContextWindow) {
+                        setShowContextWindow(false)
+                        x = 0
+                    }
+                }
+            })
+    
+    // конец участка безумного кода
     return (
         <div 
             className='element'
             onMouseEnter={ () => setShowMenu(true)}
-            onMouseLeave={ () => setShowMenu(false)}
+            onMouseLeave={ () => {
+                if (!showContextWindow) {
+                    setShowMenu(false)
+                }
+            }}
         >
             {
                 SetNoficationIcon(type, subType)
@@ -43,17 +68,40 @@ const NotificationLine = ({type, subType, title, description1, cash, desciption2
             <div className='date'>
                 {date} в {time}
             </div>
-
+            
             {
                 showMenu
                 &&
                 <div
-                    className='menu-circles'
-                    
+                    className={`menu-circles ${ showContextWindow && 'active'  }`}
+                    onClick={ () => setShowContextWindow(true) }
+                    role='presentation'
                 >
                     <CirclesMenuIcon />
                 </div>
             }
+
+            <CSSTransition
+                in={showContextWindow}
+                timeout={200}
+                classNames={{
+                    appear: 'context-window appear',
+                    appearActive: 'context-window appear-active',
+                    appearDone: 'context-window appear-done',
+                    enter: 'context-window enter',
+                    enterActive: 'context-window enter-active',
+                    enterDone: 'context-window enter-done',
+                    exit: 'context-window exit',
+                    exitActive: 'context-window exit-active',
+                    exitDone: 'context-window exit-done',
+                  }}
+                unmountOnExit
+            >
+                <div id="9">
+                    <div className='title'><MiddleQuestionCircle />Поддержка</div>
+                    <div className='title'><NoCircleIcon />Не получать</div>
+                </div>
+            </CSSTransition>
         </div> 
     )
 }
