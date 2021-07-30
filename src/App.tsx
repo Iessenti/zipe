@@ -70,7 +70,9 @@ const App = () => {
           </Route>
 
           <Route path={routes.wallet} exact>
-            <WalletPage/>
+            <OverlayContext.Provider value={{isOverlay, setIsOverlay}}>
+              <WalletPage/>
+            </OverlayContext.Provider>
           </Route>
 
           <Route path={routes.walletSettings} exact>

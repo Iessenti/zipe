@@ -13,7 +13,7 @@ import 'assets/sass/index.sass';
 import 'assets/sass/profilePopup.sass';
 
 ReactDOM.render(
-  <Provider store = {store}>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')

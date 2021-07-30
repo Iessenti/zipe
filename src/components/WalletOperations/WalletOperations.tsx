@@ -137,7 +137,6 @@ const WalletOperations = () => {
         }
     }
 
-    console.log('fuck')
 
     return (
         <div className='wallet-operations-wrapper'>

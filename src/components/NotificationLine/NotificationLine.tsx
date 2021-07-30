@@ -24,21 +24,23 @@ const NotificationLine = ({type, subType, title, description1, cash, desciption2
     // короче, блять... этот код почему-то считывает первый клик, даже когда контекстного окна нет, поэтому лучшее решение, что я
     // придумал - это счётчик с обнулением и проверкой. Работает как швейцарские, блин, часы. Через 12 минут новая серия Рика и Морти...
     let x: number = 0;
+    document.body.addEventListener('click', e => {
+        if (showContextWindow && showMenu) {
 
-    
-
-            window.addEventListener('click', e => {
-                if (showContextWindow && showMenu) {
-                    const target = e.target as HTMLElement
-                    const menu = document.querySelector('.context-window') as HTMLElement;
-                    const itsMenu = target === menu || menu.contains(target);
-                    x += 1;
-                    if (!itsMenu && (x>1) && showContextWindow) {
-                        setShowContextWindow(false)
-                        x = 0
-                    }
+            const target = e.target as HTMLElement
+            const menu = document.querySelector('.context-window') as HTMLElement;
+            if (menu !== null) {
+                const itsMenu = (target === menu) || menu.contains(target);
+                console.log(itsMenu, x)
+                x += 1;
+                if (!itsMenu && (x>1) ) {
+                    setShowContextWindow(false)
+                    x = 0
                 }
-            })
+            }
+
+        }
+    })
     
     // конец участка безумного кода
     return (

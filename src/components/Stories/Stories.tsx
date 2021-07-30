@@ -1,6 +1,7 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import {CellButtonNext} from 'shared/icons';
-// import Story from 'assets/images/Story.png';
+import { WalletActionTypes } from 'store/types/wallet';
 
 const stories = [
     {
@@ -18,7 +19,10 @@ const stories = [
 ]
 
 const Stories = () => {
-    console.log(1)
+    
+    const changeStoryState = (value: boolean) => ({type: WalletActionTypes.TOGGLE_STORY_STATE, payload: value});
+
+    const dispatch = useDispatch();
 
     return (
         <div className='stories'>
@@ -34,7 +38,7 @@ const Stories = () => {
             <div className='stories-line'>
                 {
                     stories.map( elem => 
-                        <div className='story-block' role='presentation' onClick={ () => console.log(1)}>
+                        <div className='story-block' role='presentation' onClick={ () => {document.body.style.overflowY = 'hidden'; dispatch(changeStoryState(true))}}>
                             <div className='photo-box'>
                                 <div className='title'>{elem.title}</div> 
                                 <div className='overlay' />

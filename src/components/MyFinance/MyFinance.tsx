@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-
+import { useDispatch } from 'react-redux';
+import { WalletActionTypes } from 'store/types/wallet';
 import { Animation } from 'rsuite';
 
 import { Ripple } from 'components/Ripple';
 
 import MiniFullEllipses from 'assets/images/MiniFullEllipses.png';
 import { MiniWhitePlus, RollingCurve, SmallGradientWallet, BlockedWalletIcon, QuestionCircleIcon } from '../../shared/icons';
+
 
 const { Collapse } = Animation;
 
@@ -25,6 +27,9 @@ const MyFinance = () => {
         }
 
     }
+
+    const changeBillActionsState = (value: boolean) => ({type: WalletActionTypes.TOGGLE_BILL_ACTIONS_STATE, payload: value});
+    const dispatch = useDispatch();
 
     return (
         <div className='my-finance'>
@@ -55,7 +60,7 @@ const MyFinance = () => {
                 >
                     {(props: any, ref: any) => <div ref={ref} {...props} className='main'>
 
-                        <div className='row'>
+                        <div className='row' role='presentation' onClick={() => dispatch(changeBillActionsState(true))}>
                             <div className='bill-icon' style={{background: '#E6EBFF'}}><SmallGradientWallet/></div>
                             <div className='bill-info'>
                                 <span className='bill-title'>Счёт ZIPE</span>
