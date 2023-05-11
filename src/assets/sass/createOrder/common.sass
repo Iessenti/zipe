@@ -1,0 +1,111 @@
+.order-create
+    padding: 20px 56px 0 56px
+    height: calc(100% - 60px)
+    display: flex
+    justify-content: center
+    align-content: center
+    width: 100%
+    &--card
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 40px
+        background: #fff
+        border-radius: 12px
+        height: 100%
+        max-width: 1328px
+        min-width: 1328px
+        &__back
+            padding: 13px
+            position: absolute
+            top: 40px
+            left: 50px
+            background: #F7F7FA
+            border-radius: 12px
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            height: 44px
+            width: 44px
+            transition: all .2s ease-in-out
+            &:hover
+                background: #F3F3FA
+
+
+.order-search
+    padding: 20px 56px 0 56px
+    height: calc(100% - 60px)
+    display: flex
+    justify-content: center
+    align-content: center
+    width: 100%
+    &--wrapper
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 40px
+        background: #fff
+        border-radius: 12px
+        height: 100%
+        max-width: 1328px
+        &__back
+            transition: all .2s ease-in-out
+            padding: 13px
+            position: absolute
+            top: 40px
+            left: 50px
+            background: #F7F7FA
+            border-radius: 12px
+            &:hover
+                background: red
+    
+.order-tab-title
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    margin-bottom: 32px
+    div
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        .title
+            margin: 0
+            font-variation-settings: "wght" 500
+            font-size: 28px
+            line-height: 36px
+            color: #131316
+        img
+            width: 28px
+            margin-left: 6px
+    span
+        color: #525264
+        font-variation-settings: "wght" 400
+        font-size: 16px
+        line-height: 24px
+        text-align: center
+
+input
+    outline: none
+    border: none
+    background: transparent
+    width: 405px
+    color: #212126
+    font-family: als-font-60-variable
+    font-variation-settings: "wght" 400
+    font-size: 16px
+    line-height: 24px
+    transition: all .2s ease-in-out
+    &::placeholder
+        color:#3B3B45
+        transition: all .2s ease-in-out
+    &:hover::placeholder
+        color: #BABACB!important
+    &:focus::placeholder
+        color: #BABACB!important    

@@ -1,0 +1,245 @@
+.popup-profile-wrapper 
+    height: 354px
+    width: 280px
+    display: flex
+    flex-direction: column
+    position: absolute
+    top: 48px
+    padding-top: 20px
+    right: calc(50% - 665px)
+    opacity: 0
+    z-index: 99999
+    transition: opacity 300ms ease-in-out
+
+.popup-profile-wrapper.enter
+  opacity: 0
+
+.popup-profile-wrapper.enter-done 
+  opacity: 1
+
+.popup-profile
+  position: relative
+  background: #fff
+  border-radius: 12px
+  box-shadow: 0px 8px 24px rgba(190, 190, 217, 0.16)
+  box-sizing: border-box
+  padding: 4px 0 20px 0
+  width: 280px
+  height: 334px
+  z-index: 999999
+  display: flex
+  flex-direction: column
+  align-items: center
+  opacity: 1!important
+  
+.popup-info 
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  padding: 8px 12px
+  width: 272px
+  height: 64px
+  position: relative
+  border-radius: 8px
+  cursor: pointer
+  margin-bottom: 4px
+  transition: all 0.2s ease-in-out
+  &__img
+    position: absolute
+    display: flex
+    width: 48px
+  &--balance
+    display: flex
+    flex-direction: column
+    margin-left: 12px
+    div
+      background: #33336D
+      border-radius: 32px
+      box-sizing: border-box
+      width: 111px
+      height: 24px
+      display: flex
+      justify-content: center
+      align-items: center
+      span
+        color: #FFFFFF
+        line-height: 14.92px
+        font-size: 12px
+        font-variation-settings: "wght" 500
+    &__title
+      margin: 0 0 2px 0
+      font-size: 16px
+      line-height: 20.46px
+      font-variation-settings: "wght" 500
+      color: #13131C
+
+.popup-profile-separator
+  height: 1px
+  width: 184px
+  background: #E5E5ED
+  border-radius: 50px
+  margin: 0 auto
+
+.popup-bonus
+  background: #F6F6FA
+  border-radius: 8px
+  width: 272px
+  height: 74px
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 8px 0
+  cursor: pointer
+  &__ruble
+    position: absolute
+    top: 13px
+    left: 30.64px
+  div
+    width: 154px
+    span
+      font-family: als-font-60-variable
+      font-variation-settings: "wght" 400
+      font-size: 16px
+      line-height: 24px
+      color: #13131C
+    p 
+      width: 154px
+      height: 32px
+      font-family: als-font-60-variable
+      font-variation-settings: "wght" 400
+      font-size: 12px
+      line-height: 16px
+      color: #3B3B45
+      
+.popup-menu
+  display: flex
+  flex-direction: column
+  padding: 8px 0
+  box-sizing: border-box
+  position: relative
+  &--item
+    padding: 8px 28.64px
+    display: flex
+    flex-direction: row
+    align-items: center
+    cursor: pointer
+    box-sizing: border-box
+    height: 40px
+    border-radius: 4px
+    transition: all .2s ease-in-out
+    width: 272px
+    margin-top: 4px
+    &:hover
+      background: #F6F6FA
+    span
+      font-variation-settings: "wght" 400
+      color: #212126
+      font-size: 16px
+      line-height: 24px
+    div
+      &:first-child
+        display: flex
+        flex-direction: row
+        align-items: center
+    svg
+      margin-right: 12px
+      color: black
+    &:first-child
+      span
+        font-variation-settings: "wght" 400
+        font-size: 14px
+        line-height: 17.41px
+        color: #525264
+        span
+          color: #9E9EB2
+          span
+            margin-left: 4px
+
+        font-variation-settings: "wght" 500
+        font-size: 16px
+        line-height: 20.46px
+        color: #212126
+      div
+        &:last-child
+          margin-left: 8px
+          display: flex
+          align-items: center
+          justify-content: center
+          background: linear-gradient(63.88deg, #2046FB -30.92%, #34ACFF 143.44%)
+          box-shadow: 0px 6px 15px -5px rgba(40, 88, 255, 0.16)
+          border-radius: 12px
+          width: 44px
+          height: 24px
+          span
+            color: #fff
+            font-variation-settings: "wght" 500
+            font-size: 14px
+            line-height: 16.8px
+    &:last-child
+      span
+        &:last-child
+          font-variation-settings: "wght" 400
+          line-height: 24px
+          font-size: 16px
+          color: #9E9EB2
+          margin-left: 4px
+    &:hover
+      background: #FAFAFF
+
+.popup-item:hover
+  background: #F6F6FA
+
+.popup-actions
+  margin-bottom: 8px
+  margin-top: -4px
+  &--item
+    cursor: pointer
+    padding: 8px 28.64px
+    border-radius: 8px
+    transition: all .2s ease-in-out
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 272px
+    height: 40px
+    span
+      font-size: 16px
+      font-variation-settings: "wght" 400
+      color: #E97171
+      line-height: 24px
+      transition: all .2s ease-in-out
+      margin-left: 12px
+    &:hover
+      background: #FFF7F7
+
+.popup-tooltip
+  display: flex
+  flex-direction: column
+  padding: 16px 24px
+  border: 1.5px solid #E5E5ED
+  background: #fff
+  z-index: 99999
+  position: absolute
+  border-radius: 12px
+  box-sizing: border-box
+  width: 250px
+  left: 18px
+  top: 64px
+  span 
+    line-height: 17.41px
+    font-variation-settings: "wght" 400
+    font-size: 14px
+    color: #9E9EB2
+    a
+      text-decoration: none
+      transition: all .2s ease-in-out
+      color: #667FFF
+      &:hover
+        color: #9BACFF
+
+    &:first-child
+      color: #212126
+      span
+        color: #2051FF
+  

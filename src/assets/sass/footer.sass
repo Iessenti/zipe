@@ -1,0 +1,78 @@
+.footer
+    display: flex
+    background: #ffffff
+    height: 150px
+    position: relative
+    .container 
+        margin: auto
+        display: flex
+        flex-direction: column
+        height: 100%
+        .separator
+            position: absolute
+            top: 108px
+            background: #E5E5ED
+            height: 1px
+            width: 100%
+
+.footer-info
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    position: relative
+    text-decoration: none
+    &--company
+        display: flex
+        flex-direction: row
+        align-items: center
+        cursor: pointer
+        margin-top: 24px
+        background: none
+        border: none
+        span
+            margin-left: 40px
+
+    &--menu
+        display: flex
+        flex-direction: row
+        margin-top: 24px
+        span
+            margin-left: 16px
+            text-decoration: none
+            cursor: pointer
+            font-family: als-font-60-variable
+            font-variation-settings: "wght" 400
+            font-size: 16px
+            line-height: 24px
+            color: #3B3B45
+            transition: all 0.2s ease-in-out
+            &:hover
+                color: #60606B
+
+    &--social
+        display: flex
+        flex-direction: row
+        align-self: flex-end
+        cursor: pointer
+        margin-top: 16px
+        a
+            height: 24px
+            width: 24px
+            margin-left: 12px
+            transition: all 0.2s ease-in-out
+
+    &--bottom
+        position: absolute
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        height: 41px
+        bottom: 0
+        width: 100%
+        font-size: 14px
+        span
+            text-decoration: none
+            color: #3B3B45
+            cursor: pointer
+

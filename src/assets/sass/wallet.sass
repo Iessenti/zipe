@@ -1,0 +1,662 @@
+.wallet-wrapper
+    display: flex
+    justify-content: center
+    margin-top: 40px
+    width: 100%
+
+.wallet
+    max-width: 1328px
+    width:  1328px
+    display: flex
+    flex-direction: row
+        
+.left-side
+    max-width: 392px
+    display: flex
+    flex-direction: column
+
+.right-side
+    max-width: 880px
+    width: 880px
+    min-width: 880px
+    display: flex
+    flex-direction: column
+    margin-left: 56px
+
+.mini-profile
+    padding: 16px 32px
+    background: #FFFFFF
+    border-radius: 12px
+    display: flex
+    flex-direction: row    
+    width: 392px
+    position: relative
+    &--image    
+        width: 48px
+        height: 48px
+        img 
+            position: absolute
+            width: 48px
+            height: 48px
+    &--info
+        display: flex
+        flex-direction: column
+        margin-left: 16px
+        span
+            color: #13131C
+            font-size: 16px
+            line-height: 24px
+            font-family: als-font-60-variable
+            font-variation-settings: "wght" 500
+        div
+            padding: 2px 12px
+            background: #33336D
+            border-radius: 32px
+            color: #fff
+            font-size: 12px
+            line-height: 20px
+            text-align: center
+            vertical-align: middle
+            font-family: als-font-60-variable
+            font-variation-settings: "wght" 500
+
+    &--icon
+        position: absolute
+        top: 28px
+        right: 32px
+        cursor: pointer
+        transition: all .2s ease-in-out
+        z-index: 999999999
+        &:hover 
+            svg.mini-gear-icon
+                z-index: 999999999
+                path
+                    transition: all .2s ease-in-out
+                    fill: #60606B
+
+.my-finance, .active-orders
+    padding: 24px 32px 32px 32px
+    margin-top: 16px
+    background: #FFFFFF
+    border-radius: 12px
+    display: flex
+    flex-direction: column
+    align-items: center
+    //transition: all .4s ease-in-out
+    .finance-header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 16px
+        position: relative
+        .info
+            display: flex
+            flex-direction: column
+            .title
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 500
+                font-size: 20px
+                line-height: 28px
+                color: #13131C
+            .cash
+                color: #9E9EB0
+                font-size: 16px
+                line-height: 24px
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 400
+        .icon
+            position: absolute
+            top: 8px
+            right: 0px
+            cursor: pointer
+            transition: all .4s ease-in-out
+        .rotated
+            transform: rotate(180deg)
+    
+    div.main
+        transition: all .4s ease
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        .row
+            display: flex
+            flex-direction: row
+            align-items: center
+            padding: 8px 28px
+            margin: 8px 0 0 0
+            transition: all .4s ease-in-out
+            cursor: pointer
+            width: 384px
+            .bill-icon
+                height: 48px
+                width: 48px
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 6px
+                margin-right: 16px
+
+            .bill-info
+                display: flex
+                flex-direction: column
+                .bill-title
+                    color: #13131C
+                    font-size: 16px
+                    line-height: 24px
+                    font-family: als-font-60-variable
+                    font-variation-settings: "wght" 500
+                .bill-desc
+                    color: #9E9EB0
+                    font-size: 14px
+                    line-height: 22px
+                    font-family: als-font-60-variable
+                    font-variation-settings: "wght" 500
+                    display: flex
+                    align-items: center
+                    .question
+                        margin-left: 4px
+                        margin-top: 2px
+                        svg.question-circle-icon
+                            transition: all .2s ease-in-out
+                        &:hover svg.question-circle-icon
+                            transition: all .2s ease-in-out
+                            circle
+                                transition: all .2s ease-in-out
+                                stroke: #60606B
+                            path 
+                                transition: all .2s ease-in-out
+                                fill: #60606B
+                            
+
+            .bill-cash
+                margin-left: auto
+                font-size: 16px
+                line-height: 24px
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 500
+                color: #13131C
+                span
+                    color: #9E9EB0
+
+            &:hover
+                background: #F6F6FA
+                border-radius: 6px
+    button
+        background: #567BFF
+        border-radius: 6px
+        padding: 12px 24px
+        width: 100%
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        transition: all .2s ease-in-out
+        cursor: pointer
+        margin-top: 12px
+        span
+            margin-left: 8px
+            color: #FFFFFF
+            font-size: 16px
+            line-height: 24px
+            font-family: als-font-60-variable
+            font-variation-settings: "wght" 500
+        &:hover
+            background: #7996FF
+    
+    .popup
+        position: absolute
+        width: 256px
+        margin-left: 672px
+        background: #FFFFFF
+        box-shadow: 0px 8px 24px -4px rgba(18, 18, 28, 0.08)
+        border-radius: 12px
+        padding: 12px 16px
+        display: flex
+        flex-direction: column
+        z-index: 99999
+        h1
+            font-size: 16px
+            line-height: 24px
+            color: #13131C
+            font-family: als-font-60-variable
+            font-variation-settings: "wght" 500
+        span
+            font-size: 16px
+            line-height: 24px
+            color: #3B3B45
+        a 
+            color: #567BFF
+            cursor: pointer
+            font-size: 16px
+            line-height: 24px
+        
+.active-orders
+    .main
+        .row
+            .bill-icon
+                svg 
+                    z-index: 100
+                    position: absolute
+                    width: 48px
+                    height: 48px
+        .empty-orders
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            .image
+                height: 96px
+                width: 96px
+                border-radius: 50%
+                background: #F6F6FA
+                margin-top: 6px
+            span
+                margin-top: 16px
+                margin-bottom: 12px
+                width: 210px
+                font-size: 16px
+                line-height: 24px
+                color: #9E9EB0
+                text-align: center
+
+    button
+        border: 1px solid #D0DAFF
+        border-radius: 6px
+        background: #FFFFFF
+        cursor: pointer
+        transition: all .2s ease-in-out
+        span
+            color: #567BFF
+        svg
+            path 
+                stroke: #567BFF
+        &:hover 
+            border: 1px solid #7996FF
+            background: #FFFFFF
+
+.stories
+    display: flex
+    flex-direction: column
+    width: 100%
+    .header
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        width: 850px
+        max-width: 850px
+        min-width: 850px
+        span
+            font-size: 24px
+            line-height: 32px
+            color: #13131C
+            font-family: als-font-60-variable
+            font-variation-settings: "wght" 500
+
+    .stories-line
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 16px
+        .story-block
+            width: 208px
+            height: 128px
+            box-sizing: border-box
+            border-radius: 12px
+            border: 1px solid transparent
+            background: linear-gradient(45deg, #2046FB 0%, #34ACFF 100%) border-box
+            display: flex
+            justify-content: center
+            align-items: center
+            div.photo-box
+                width: 202px
+                height: 122px
+                border-radius: 10px
+                border: 3px solid white
+                position: relative
+                display: flex
+                justify-content: center
+                overflow: hidden
+                background-image: url('../images/Story.png')
+                background-size: cover
+                cursor: pointer
+                transition: all .2s ease-in-out
+                &:hover 
+                   box-shadow: 0px 0px 100px 100px rgba(255, 255, 255, 0.1) inset
+                    
+                .overlay
+                    position: absolute
+                    box-sizing: content-box
+                    width: 202px
+                    color: red
+                    height: 122px
+                    opacity: 1!important
+                    background: linear-gradient(180deg, rgba(19, 19, 22, 0) 0%, rgba(19, 19, 22, 0.04) 7.95%, rgba(19, 19, 22, 0.06) 35.21%, rgba(19, 19, 22, 0.16) 59.37%, rgba(19, 19, 22, 0.32) 76.54%, rgba(19, 19, 22, 0.4) 82.97%, rgba(19, 19, 22, 0.5) 91.9%)
+                .title
+                    position: absolute
+                    bottom: 4px
+                    width: 184px
+                    text-overflow: ellipsis
+                    white-space: nowrap
+                    overflow: hidden
+                    font-size: 16px
+                    line-height: 24px
+                    color: #FFFFFF
+                    z-index: 998
+
+.arrows
+    display: flex
+    flex-direction: row
+    div
+        width: 28px
+        height: 28px
+        background: #FFFFFF
+        box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12)
+        border-radius: 6px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .2s ease-in-out
+        cursor: pointer
+        &:hover
+            opacity: .72
+    .back
+        margin-right: 8px
+        svg
+            transform: rotate(180deg)
+
+.wallet-operations-wrapper
+    margin-top: 40px
+    display: flex
+    flex-direction: column
+    .header
+        font-size: 24px
+        line-height: 32px
+        color: #13131C
+        font-family: als-font-60-variable
+        font-variation-settings: "wght" 500
+    
+    .calendar-input-wrapper
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 16px
+        .arrows
+            div
+                height: 40px
+                width: 40px
+                box-shadow: unset
+            .calendar
+                padding: 8px 39px
+                width: 144px
+                margin-right: 8px
+                font-size: 16px
+                line-height: 24px
+                color: #13131C
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 500
+                div
+                    margin-right: 8px
+                    svg
+                        path 
+                            stroke: #13131C
+                        rect 
+                            fill: #13131C
+
+        .search
+            padding: 8px 16px
+            width: 616px
+            background: #FAFAFC
+            border: 1px solid #D9D9E3
+            box-sizing: border-box
+            border-radius: 6px
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            input::placeholder
+                font-size: 16px
+                line-height: 24px
+                color: #9E9EB0!important
+                transition: all .2s ease-in-out
+            &:hover
+                input::placeholder
+                    color: #BABACB!important
+            input:focus .search
+                border: 1px solid #CACAE0
+
+    .filter-panel
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 12px
+        .categories
+            display: flex
+            flex-direction: row
+            span
+                margin-right: 32px
+                font-size: 16px
+                line-height: 24px
+                color: #9E9EB0
+                cursor: pointer
+                transition: all .2s ease-in-out
+                &:hover
+                    color: #60606B
+        
+        .filter
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            div
+                margin-left: 32px
+                display: flex
+                align-items: center
+                font-size: 16px
+                line-height: 24px
+                color: #13131C
+                font-family: als-font-60-variable
+                font-variation-settings: "wght" 500
+                cursor: pointer
+                transition: all .2s ease-in-out
+                &:hover
+                    color: #464650
+                    svg
+                        path
+                            transition: all .2s ease-in-out
+                            stroke: #464650
+                svg
+                    transition: all .2s ease-in-out
+                    margin-left: 8px
+
+                    
+.date-transaction-wrapper
+    width: 100%
+    margin-top: 16px
+    padding: 24px 32px 0 32px
+    background: #FFFFFF
+    border-radius: 12px
+    display: flex
+    flex-direction: column
+    font-family: als-font-60-variable
+    span
+        font-size: 16px
+        line-height: 24px
+        color: #13131C
+        font-family: als-font-60-variable
+        font-variation-settings: "wght" 500
+        margin-bottom: 12px
+    div.transaction
+        display: flex
+        flex-direction: column
+        transition: all .4s ease-in-out
+        .main
+            width: 100%
+            margin-bottom: 32px
+            display: flex
+            flex-direction: row
+            align-items: center
+            cursor: pointer
+            .icon
+                margin-right: 16px
+                height: 48px
+                width: 48px
+                border-radius: 6px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: blue
+
+
+            .info
+                display: flex
+                flex-direction: column
+                justify-content: center
+                .title
+                    font-family: als-font-60-variable
+                    font-variation-settings: "wght" 500
+                    font-size: 18px
+                    line-height: 26px
+                    color: #13131C
+                    margin: 2px
+
+                .desc
+                    font-size: 14px
+                    line-height: 22px
+                    color: #3B3B45
+                    font-variation-settings: "wght" 400
+                    margin: 0
+                    span
+                        margin-left: 4px
+                        color: #567BFF   
+            .cash
+                margin-left: auto
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: flex-end
+                span
+                    margin: 0
+                .value
+                    font-size: 16px
+                    line-height: 24px
+                .date
+                    font-size: 14px
+                    line-height: 22px
+                    color: #3B3B45
+                    font-variation-settings: "wght" 400
+
+.additional-data
+    transition: all .4s ease
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: relative
+    font-family: als-font-60-variable
+    .main-block
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: 158px
+        .data
+            border: 1px solid #E6EBFF
+            box-sizing: border-box
+            border-radius: 6px
+            width: 568px
+            margin-right: 16px
+            padding: 16px 24px
+            .title
+                font-size: 18px
+                line-height: 26px
+                color: #13131C
+                font-variation-settings: "wght" 500
+                margin-bottom: 4px
+            .row
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: space-between
+                width: 100%
+                position: relative
+                
+                .title
+                    font-size: 14px
+                    line-height: 22px
+                    color: #9E9EB0
+                    width: fit-content
+                    background: #fff
+                    z-index: 300
+                .value
+                    font-size: 16px
+                    line-height: 24px
+                    color: #3B3B45
+                    width: fit-content
+                    z-index: 300
+                    background: #fff
+                .dashed
+                    width: 100%
+                    position: absolute
+                    box-sizing: border-box
+                    border-bottom: 1px dashed #CACAE0
+
+        .buttons-wrapper
+            display: flex
+            flex-direction: column
+            button
+                background: #FFFFFF
+                border: 1px solid #E6EBFF
+                border-radius: 6px
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: row
+                padding: 11px 28px
+                font-size: 16px
+                line-height: 24px
+                color: #567BFF
+                transition: all .2s ease-in-out
+                width: 232px
+                svg 
+                    margin-right: 8px
+                &:hover
+                    border: 1px solid #7996FF
+            .margin
+                margin: 7px 0
+            
+
+    .line
+        margin: 32px 0
+        width: 816px
+        height: 1px
+        background: #D9D9E3
+        border-radius: 2px
+
+
+
+
+.ruslan-pedik
+    position: relative
+
+
+.story-transition-enter  
+  opacity: 0
+  transform: scale(0.9)
+ 
+.story-transition-enter-active  
+  opacity: 1
+  transform: translateX(0)
+  transition: opacity 300ms, transform 300ms
+ 
+.story-transition-exit  
+  opacity: 1
+ 
+.story-transition-exit-active  
+  opacity: 0
+  transform: scale(0.9)
+  transition: opacity 300ms, transform 300ms
+ 

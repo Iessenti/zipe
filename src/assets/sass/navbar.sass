@@ -1,0 +1,62 @@
+.navbar
+    display: flex
+    width: 100%
+    height: 60px
+    background-color: #ffffff
+    .container 
+        width: 1328px
+        height: 36px
+        margin: auto
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 12px 0 12px 0
+        .logo
+            cursor: pointer
+            height: 12px
+    div
+        display: flex
+        flex-direction: row
+        align-items: center
+        
+.info 
+    &__make-order
+        cursor: pointer
+        margin: 0
+        text-decoration: none!important
+        transition: all .2s ease-in-out
+        color: #567BFF
+        font-family: als-font-60-variable
+        font-variation-settings: "wght" 500
+        font-size: 14px
+        line-height: 22px
+        font-feature-settings: 'calt' off
+        &:hover
+            color: #7996FF
+        
+            
+    &__divider
+        background: #D9D9E3
+        width: 1px
+        height: 36px
+        margin: 0 0 0 24px
+    &__icon-container
+        cursor: pointer
+        display: flex
+        align-items: center
+        margin-left: 24px
+        position: relative
+        transition: all 0.2s ease-in-out
+
+        .indicator 
+            border-radius: 50%
+            width: 8px
+            height: 8px
+            position: absolute
+            top: -2px
+            right: -2px
+            transition: all .2s ease-in-out
+
+        &:hover .indicator
+            opacity: 0           

@@ -1,0 +1,105 @@
+.wallet-settings-wrapper
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.wallet-settings
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+
+    justify-content: space-between
+    align-items: center
+    margin: 40px 0
+    max-width: 1328px
+    width: 1328px
+    max-height: 500px
+    font-family: als-font-60-variable
+    & > div
+        width: 656px
+        padding: 24px 32px
+        background: #fff
+        border-radius: 12px
+        position: relative
+        display: flex
+        flex-direction: column
+        margin-top: 16px
+        .title
+            font-size: 24px
+            line-height: 32px
+            color: #13131C
+            font-variation-settings: "wght" 500
+        .desc
+            font-size: 16px
+            line-height: 24px
+            color: #3B3B45
+            font-variation-settings: "wght" 400
+            max-width: 528px
+            margin-top: 4px
+        a 
+            margin-top: 12px
+            font-size: 16px
+            line-height: 24px
+            color: #567BFF
+            text-decoration: none
+            cursor: pointer
+        .toggle
+            position: absolute
+            right: 32px
+            top: 28px
+
+.input-container
+    margin-top: 20px
+    .wallet-settings-form
+        width: 544px
+        padding: 8px 16px
+        background: #F6F6FA
+        border: 1px solid #D9D9E3
+        box-sizing: border-box
+        border-radius: 6px
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin: 4px 0
+        font-size: 16px
+        line-height: 24px
+        color: #B0B0B7
+        .icon
+            height: 24px
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            margin-right: 12px
+        img.icon
+            opacity: 0.5
+        input
+            outline: none
+            border: none
+            background: transparent
+            width: 405px
+            color: #212126
+            font-family: als-font-60-variable
+            font-variation-settings: "wght" 400
+            font-size: 16px
+            line-height: 24px
+            transition: all .2s ease-in-out
+            &::placeholder
+                color:#3B3B45
+                transition: all .2s ease-in-out
+            &:hover::placeholder
+                color: #BABACB!important
+            &:focus::placeholder
+                color: #BABACB!important
+    .space
+        justify-content: space-between
+    .rotated
+        svg
+            transform: rotate(180deg) 
+
+    .input-additional
+        font-size: 14px
+        line-height: 22px
+        color: #B0B0B7
+        

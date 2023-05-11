@@ -1,0 +1,87 @@
+.ready-performers
+    padding: 20px 56px 0 56px
+    height: 100%
+    font-family: als-font-60-variable
+    &--wrapper
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 40px
+        background: #fff
+        border-radius: 12px
+        height: 100%
+        & .back
+            position: absolute
+            top: 40px
+            left: 50px
+            font-size: 16px
+            line-height: 24px
+            color: #567BFF
+            display: flex
+            flex-direction: row
+            align-items: center
+            cursor: pointer
+            svg
+                margin-right: 8px
+        
+    & .cards-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+        max-width: 992px
+
+        & .card
+            padding: 16px 20px
+            background: #FAFAFC
+            border-radius: 6px
+            display: flex
+            flex-direction: row
+            width: 320px
+            margin-bottom: 16px
+            position: relative
+            transition: all .2s ease-in-out
+            cursor: pointer
+            &:hover
+                opacity: 0.84
+            img
+                width: 44px
+                height: 44px
+                margin-right: 12px
+            &--info
+                display: flex
+                flex-direction: column
+                .name
+                    font-size: 16px
+                    line-height: 24px
+                    color: #13131C
+                    font-variation-settings: "wght" 500
+                    text-overflow: ellipsis
+                    white-space: nowrap
+                    overflow: hidden
+                    width: 157px
+                .title
+                    font-size: 12px
+                    line-height: 20px
+                    color: #60606B
+                    font-variation-settings: "wght" 400
+
+            &--star
+                display: flex
+                flex-direction: row
+                align-items: center
+                padding: 2px 4px
+                width: 59px
+                color: #3B3B45
+                font-size: 14px
+                line-height: 22px
+                position: absolute
+                top: 16px
+                right: 20px
+                img
+                    height: 16px
+                    width: 16px
+                    margin-right: 4px
+            
